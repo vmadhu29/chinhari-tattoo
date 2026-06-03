@@ -61,43 +61,41 @@
         </div>
     </div>
 
-    {{-- Hero Content: Premium White Card Overlay --}}
-    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    {{-- Hero Content: Premium Glassmorphic Card --}}
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20">
         <div 
-            class="bg-white text-black p-6 sm:p-8 md:p-10 rounded-[24px] border border-gray-100 max-w-md md:max-w-lg shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex flex-col items-start text-left
+            class="bg-black/50 backdrop-blur-md border border-white/10 p-8 sm:p-10 md:p-12 rounded-[32px] max-w-md md:max-w-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col items-start text-left
                    opacity-0 animate-fade-in animate-fill-forwards relative overflow-hidden"
             style="animation-delay:0.3s;"
         >
             {{-- Subtle Gold Accent Badge --}}
-            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 bg-gold/10 border border-gold/20 rounded-full text-[9px] uppercase tracking-[0.15em] font-bold text-gold-dark mb-4">
-                <span>✨ Chhattisgarh's Premier Tattoo Studio</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-gold/10 border border-gold/30 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold text-gold mb-5 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                <span>Chhattisgarh's Premier Studio</span>
             </div>
 
-            {{-- Main Headline: Mixed Serif & Sans-Serif Gradient Typography --}}
-            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.2] text-[#111111] mb-3">
+            {{-- Main Headline: Mixed Serif & Sans-Serif Gold-Accent Typography --}}
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.2] text-white mb-3">
                 Your Skin,<br>
-                Our <span class="font-sans font-black bg-gradient-to-r from-gold-dark to-gold bg-clip-text text-transparent uppercase tracking-wide block mt-0.5">Canvas</span>
+                Our <span class="font-sans font-black bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent uppercase tracking-wider block mt-0.5">Canvas</span>
             </h1>
 
             {{-- Gold Divider Line --}}
-            <div class="w-12 h-0.5 bg-gradient-to-r from-gold to-gold-light mb-4 rounded-full"></div>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-gold to-gold-light mb-4 rounded-full shadow-sm"></div>
 
             {{-- Subtitle --}}
-            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 max-w-md">
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 max-w-md">
                 Chhattisgarh's premier destination for bespoke, high-end body art. Led by master artist Dharam Sahu, we transform your stories, values, and memory into breathing masterpieces using world-class safety standards and award-winning craftsmanship.
             </p>
 
             {{-- CTA Buttons --}}
-            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-                <a href="{{ route('booking.create') }}" class="px-6 py-3 bg-black text-white hover:bg-gold-dark hover:text-black font-semibold rounded-xl text-xs sm:text-sm transition-all duration-300 text-center shadow-lg hover:shadow-gold-sm hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                <a href="{{ route('booking.create') }}" class="btn px-7 py-3.5 bg-gold text-black hover:bg-white hover:text-black transition-all duration-300 font-bold text-xs sm:text-sm text-center shadow-lg shadow-gold/10 hover:shadow-white/10 active:scale-95 flex items-center justify-center gap-2">
                     Book Free Consultation
                 </a>
-                <a href="tel:{{ config('studio.phone') }}" class="inline-flex items-center gap-2 text-black hover:text-gold transition-colors font-bold text-xs sm:text-sm tracking-wide active:scale-95 group">
-                    <svg class="w-3.5 h-3.5 text-black group-hover:text-gold transition-colors flex-shrink-0 group-hover:rotate-12 duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    <span class="relative py-0.5">
-                        Book on Call
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-                    </span>
+                <a href="tel:{{ config('studio.phone') }}" class="btn px-7 py-3.5 border border-white/20 text-white hover:text-gold hover:border-gold hover:bg-gold/10 transition-all duration-300 font-bold text-xs sm:text-sm tracking-wide text-center inline-flex items-center justify-center gap-2 active:scale-95 group">
+                    <svg class="w-4 h-4 text-white group-hover:text-gold transition-colors flex-shrink-0 group-hover:rotate-12 duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span>Book on Call</span>
                 </a>
             </div>
         </div>
@@ -113,9 +111,13 @@
 {{-- ══════════════════════════════════════════════════════
      STATS SECTION
      ══════════════════════════════════════════════════════ --}}
-<section class="py-12 bg-studio-darker border-y border-studio-border" aria-label="Studio statistics">
+<section class="py-14 bg-studio-darker border-y border-studio-border relative overflow-hidden" aria-label="Studio statistics">
+    {{-- Decorative gold-accent lines --}}
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-studio-border">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 relative">
             @php
                 $stats = [
                     ['number' => 500,  'suffix' => '+',  'label' => 'Happy Clients'],
@@ -124,12 +126,12 @@
                     ['number' => 5,    'suffix' => '.0', 'label' => 'Google Rating'],
                 ];
             @endphp
-            @foreach($stats as $stat)
-                <div class="text-center py-6 px-4" data-reveal>
-                    <div class="stat-number">
+            @foreach($stats as $i => $stat)
+                <div class="text-center px-4 relative {{ $i > 0 ? 'md:border-l md:border-studio-border/50' : '' }} {{ $i == 1 ? 'border-r border-studio-border/30 md:border-r-0' : '' }}" data-reveal data-delay="{{ $i * 60 }}">
+                    <div class="stat-number transition-transform duration-500 hover:scale-105 inline-block">
                         <span data-counter data-target="{{ $stat['number'] }}">0</span>{{ $stat['suffix'] }}
                     </div>
-                    <div class="stat-label">{{ $stat['label'] }}</div>
+                    <div class="stat-label text-[10px] tracking-[0.2em] font-bold text-studio-muted mt-2">{{ $stat['label'] }}</div>
                 </div>
             @endforeach
         </div>
@@ -151,35 +153,80 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @php
                 $categories = [
-                    ['name' => 'Realism',        'icon' => '🎭', 'count' => 48],
-                    ['name' => 'Portrait',        'icon' => '👁️', 'count' => 35],
-                    ['name' => 'Blackwork',       'icon' => '⬛', 'count' => 62],
-                    ['name' => 'Tribal',          'icon' => '🔱', 'count' => 29],
-                    ['name' => 'Geometric',       'icon' => '◻️', 'count' => 41],
-                    ['name' => 'Mandala',         'icon' => '🌸', 'count' => 53],
-                    ['name' => 'Neo Traditional', 'icon' => '🦅', 'count' => 27],
-                    ['name' => 'Minimalist',      'icon' => '✦',  'count' => 38],
+                    [
+                        'name' => 'Realism',
+                        'count' => 48,
+                        'image' => 'https://www.thefashionisto.com/wp-content/uploads/2023/11/Lion-Forearm-Tattoo-Men.jpg'
+                    ],
+                    [
+                        'name' => 'Portrait',
+                        'count' => 35,
+                        'image' => 'https://i.pinimg.com/736x/59/c5/97/59c597ad941b79839b5139ccd0aff3a8.jpg'
+                    ],
+                    [
+                        'name' => 'Blackwork',
+                        'count' => 62,
+                        'image' => 'https://tattoobnb.com/cdn/shop/files/Big-Blackwork-Snake-and-Circles-on-Men-Back-Tattoo-by-ahn_ttt-Tattoobnb.webp?v=1760683712&width=533'
+                    ],
+                    [
+                        'name' => 'Tribal',
+                        'count' => 29,
+                        'image' => 'https://cdn2.stylecraze.com/wp-content/uploads/2024/08/Polynesian-Tribal-Leg-Tattoo.jpg'
+                    ],
+                    [
+                        'name' => 'Geometric',
+                        'count' => 41,
+                        'image' => 'https://i.pinimg.com/originals/8e/11/eb/8e11eb8cb3a9a1e4011d855d45217ea9.jpg'
+                    ],
+                    [
+                        'name' => 'Mandala',
+                        'count' => 53,
+                        'image' => 'https://herway.net/wp-content/uploads/2024/08/Ornamental-Geometric-Mandala-Sleeve.jpg'
+                    ],
+                    [
+                        'name' => 'Neo Traditional',
+                        'count' => 27,
+                        'image' => 'https://inkpicks.com/wp-content/uploads/2024/11/snake-neck-tattoo-761614.webp'
+                    ],
+                    [
+                        'name' => 'Minimalist',
+                        'count' => 38,
+                        'image' => 'https://91tattoos.com/wp-content/uploads/2025/07/Classic-Outline-Rose-Wrist-Tattoo-With-Blush-Pink-Short-Nails-For-Soft-Floral-Tattoo-Designs-1229x1536.jpg'
+                    ],
                 ];
             @endphp
 
             @foreach($categories as $i => $cat)
                 <a
                     href="{{ route('portfolio', ['style' => Str::slug($cat['name'])]) }}"
-                    class="card-hover group relative overflow-hidden rounded-2xl p-6 flex flex-col justify-between min-h-[160px]"
+                    class="card-hover group relative overflow-hidden rounded-2xl p-6 flex flex-col justify-between min-h-[180px]"
                     data-reveal
                     data-delay="{{ $i * 80 }}"
                     aria-label="{{ $cat['name'] }} tattoos"
                 >
-                    <div class="flex justify-between items-start mb-8">
-                        <span class="text-3xl" aria-hidden="true">{{ $cat['icon'] }}</span>
-                        <span class="text-xs text-studio-faint">{{ $cat['count'] }}+</span>
+                    {{-- Background Image --}}
+                    <img
+                        src="{{ $cat['image'] }}"
+                        alt="{{ $cat['name'] }} style"
+                        loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out z-0"
+                    >
+                    {{-- Gradient Overlay (light-to-cream matching light mode design) --}}
+                    <div class="absolute inset-0 bg-gradient-to-t from-studio-black/95 via-studio-black/50 to-studio-black/10 transition-opacity duration-300 group-hover:opacity-90 z-0"></div>
+
+                    {{-- Top Section: Count --}}
+                    <div class="flex justify-end items-start z-10">
+                        <span class="text-xs font-semibold text-studio-faint bg-studio-black/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-studio-border/50 shadow-sm">{{ $cat['count'] }}+</span>
                     </div>
-                    <div>
+
+                    {{-- Bottom Section: Title -- z-10 to stay on top of background image --}}
+                    <div class="z-10">
                         <h3 class="text-studio-white font-semibold text-lg group-hover:text-gold transition-colors duration-300">{{ $cat['name'] }}</h3>
                         <p class="text-studio-faint text-xs mt-1 group-hover:text-studio-muted transition-colors">View Gallery →</p>
                     </div>
-                    {{-- Hover overlay --}}
-                    <div class="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-2xl transition-all duration-300 pointer-events-none"></div>
+
+                    {{-- Gold Border on Hover --}}
+                    <div class="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-2xl transition-all duration-300 pointer-events-none z-20"></div>
                 </a>
             @endforeach
         </div>
@@ -289,13 +336,19 @@
         @else
             <div class="max-w-5xl mx-auto bg-studio-card border border-studio-border rounded-3xl p-8 md:p-12 shadow-card flex flex-col md:flex-row gap-12 items-center" data-reveal>
                 {{-- Left: Portrait --}}
-                <div class="w-full md:w-2/5 aspect-[4/5] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-gold-sm relative group flex-shrink-0 bg-studio-dark">
-                    <img 
-                        src="{{ $artist->profile_photo_url }}" 
-                        alt="{{ $artist->display_name }}" 
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="relative w-full md:w-2/5 aspect-[4/5] flex-shrink-0 group">
+                    {{-- Offset Gold Accent Frame behind the photo --}}
+                    <div class="absolute -inset-2 border border-gold/45 rounded-3xl translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5 -z-10 pointer-events-none"></div>
+                    
+                    {{-- Actual Image Container --}}
+                    <div class="w-full h-full rounded-2xl overflow-hidden border border-studio-border bg-studio-dark relative z-10 shadow-md">
+                        <img 
+                            src="{{ $artist->profile_photo_url }}" 
+                            alt="{{ $artist->display_name }}" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+                    </div>
                 </div>
 
                 {{-- Right: Content --}}
@@ -345,7 +398,10 @@
 {{-- ══════════════════════════════════════════════════════
      BOOKING PROCESS — How it Works
      ══════════════════════════════════════════════════════ --}}
-<section class="py-24 bg-studio-darker" aria-labelledby="process-heading">
+<section class="py-24 bg-studio-darker relative overflow-hidden" aria-labelledby="process-heading">
+    {{-- Fine line accents matching premium luxury brand layout --}}
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent"></div>
+    
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-16" data-reveal>
@@ -353,29 +409,30 @@
             <h2 id="process-heading" class="section-title">How to Book<br><span class="text-gold-gradient">Your Appointment</span></h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
             {{-- Connecting Line (desktop) --}}
-            <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" aria-hidden="true"></div>
+            <div class="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent z-0" aria-hidden="true"></div>
 
             @php
                 $steps = [
-                    ['num'=>'01','icon'=>'🗓️','title'=>'Book Online','desc'=>'Choose your artist, style, and time slot through our booking system.'],
-                    ['num'=>'02','icon'=>'💬','title'=>'Consultation','desc'=>'Share your idea, placement, and reference images with your artist.'],
-                    ['num'=>'03','icon'=>'✏️','title'=>'Design Review','desc'=>'Review and approve your custom design before the session.'],
-                    ['num'=>'04','icon'=>'🎨','title'=>'Get Inked','desc'=>'Sit back and watch your tattoo come to life by our expert.'],
+                    ['num'=>'01','title'=>'Book Online','desc'=>'Choose your artist, style, and time slot through our booking system.'],
+                    ['num'=>'02','title'=>'Consultation','desc'=>'Share your idea, placement, and reference images with your artist.'],
+                    ['num'=>'03','title'=>'Design Review','desc'=>'Review and approve your custom design before the session.'],
+                    ['num'=>'04','title'=>'Get Inked','desc'=>'Sit back and watch your tattoo come to life by our expert.'],
                 ];
             @endphp
 
             @foreach($steps as $i => $step)
-                <div class="text-center" data-reveal data-delay="{{ $i * 100 }}">
-                    <div class="relative inline-flex items-center justify-center mb-6">
-                        <div class="w-20 h-20 rounded-full bg-studio-card border border-studio-border flex items-center justify-center text-3xl group-hover:border-gold/50 transition-all duration-300">
-                            {{ $step['icon'] }}
+                <div class="text-center group relative z-10" data-reveal data-delay="{{ $i * 100 }}">
+                    <div class="relative flex justify-center items-center mb-6">
+                        {{-- Elegant round backdrop with a thin gold border --}}
+                        <div class="w-24 h-24 rounded-full border border-studio-border/60 bg-studio-card/85 flex items-center justify-center relative group-hover:border-gold/50 group-hover:shadow-gold-sm transition-all duration-500">
+                            {{-- Massive elegant serif number in gold --}}
+                            <span class="font-serif text-4xl font-light text-gold tracking-tight group-hover:scale-110 transition-transform duration-500">{{ $step['num'] }}</span>
                         </div>
-                        <span class="absolute -top-2 -right-2 font-display text-gold text-sm tracking-widest">{{ $step['num'] }}</span>
                     </div>
-                    <h3 class="text-studio-white font-semibold text-lg mb-3">{{ $step['title'] }}</h3>
-                    <p class="text-studio-muted text-sm leading-relaxed">{{ $step['desc'] }}</p>
+                    <h3 class="text-studio-white font-semibold text-lg mb-3 group-hover:text-gold transition-colors duration-300">{{ $step['title'] }}</h3>
+                    <p class="text-studio-muted text-xs sm:text-sm leading-relaxed max-w-[240px] mx-auto">{{ $step['desc'] }}</p>
                 </div>
             @endforeach
         </div>
