@@ -65,17 +65,18 @@
     }
 
     .btn-gold {
-        @apply btn px-7 py-3.5 text-white shadow-sm active:scale-95 transition-all duration-300;
-        background: linear-gradient(135deg, #B8961E 0%, #9C7E14 100%);
+        @apply btn px-7 py-3.5 text-black font-bold shadow-sm active:scale-95 transition-all duration-300;
+        background: linear-gradient(135deg, #D4AF37 0%, #B8961E 100%);
     }
 
     .btn-gold:hover {
-        filter: brightness(1.08);
+        background: linear-gradient(135deg, #E5C84A 0%, #D4AF37 100%);
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
     }
 
     .btn-outline-gold {
-        @apply btn px-7 py-3.5 border border-gold-dark/60 text-gold-dark
-               hover:bg-gold-dark/10 hover:border-gold-dark active:scale-95;
+        @apply btn px-7 py-3.5 border border-gold/60 text-gold
+               hover:bg-gold/10 hover:border-gold active:scale-95;
     }
 
     .btn-crimson {
@@ -88,10 +89,10 @@
     }
 
     .btn-whatsapp {
-        @apply btn px-7 py-3.5 text-white active:scale-95;
+        @apply btn px-7 py-3.5 text-white font-bold active:scale-95;
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     }
-    .btn-whatsapp:hover { filter: brightness(1.1); }
+    .btn-whatsapp:hover { filter: brightness(1.12); box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3); }
 
     .btn-sm { @apply px-5 py-2.5 text-xs; }
     .btn-lg { @apply px-9 py-5 text-base; }

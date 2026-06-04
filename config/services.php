@@ -41,4 +41,9 @@ return [
         'currency' => env('RAZORPAY_CURRENCY', 'INR'),
     ],
 
+    'google_places' => [
+        'key' => env('GOOGLE_MAPS_API_KEY'),
+        'place_id' => env('GOOGLE_PLACE_ID'),
+    ],
+
 ];

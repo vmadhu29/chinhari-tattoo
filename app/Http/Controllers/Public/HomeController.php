@@ -39,7 +39,7 @@ class HomeController extends Controller
         $featuredArtists      = Artist::where('is_active', true)->orderBy('sort_order')->take(3)->get();
         $featuredPortfolios   = Portfolio::where('is_featured', true)->where('is_published', true)->take(8)->get();
         $homeFaqs             = Faq::where('is_published', true)->orderBy('sort_order')->take(5)->get();
-        $googleReviews        = config('reviews');
+        $googleReviews        = \App\Models\Review::all();
 
         return view('public.home.index', compact(
             'featuredArtists',
