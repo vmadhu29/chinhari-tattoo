@@ -1,58 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Chinhari Tattoo Studio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, premium web application built for **Chinhari Tattoo Studio**, based in Raipur, Chhattisgarh. This platform provides an immersive experience for clients to explore artist portfolios, learn about tattoo styles, and securely book appointments online.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Online Booking Wizard**: A seamless, step-by-step booking process powered by Livewire, ensuring users can easily pick services, artists, and dates.
+- **Secure Payments**: Integrated with Razorpay to handle deposit payments securely during the booking process.
+- **Responsive Design**: A stunning, mobile-first frontend built with Tailwind CSS, featuring smooth animations and a premium dark aesthetic.
+- **Robust Backend**: Built on the Laravel framework, offering top-tier security, database transaction handling, and form validation.
+- **Artist & Portfolio Showcase**: Dedicated sections to highlight the studio's award-winning artists and their best work.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 💻 Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Framework**: [Laravel](https://laravel.com/) (PHP)
+- **Frontend Interactivity**: [Livewire](https://laravel-livewire.com/) & Alpine.js
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Database**: MySQL
+- **Payments**: Razorpay API
 
-## Learning Laravel
+## 🛠️ Setup Instructions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+To get this project up and running locally, follow these steps:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd chinhari-tattoo
+   ```
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+2. **Install PHP Dependencies**
+   ```bash
+   composer install
+   ```
 
-## Agentic Development
+3. **Install Node Dependencies**
+   ```bash
+   npm install
+   npm run build
+   ```
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+4. **Environment Setup**
+   Copy the example environment file and generate a new application key:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   Update your `.env` file with your database credentials and Razorpay API keys (`RAZORPAY_KEY` and `RAZORPAY_SECRET`).
 
-```bash
-composer require laravel/boost --dev
+5. **Database Migrations**
+   Run the migrations and seeders to set up your database:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-php artisan boost:install
-```
+6. **Storage Link**
+   Create a symbolic link for the storage directory to serve uploaded images (like portfolios and reference images):
+   ```bash
+   php artisan storage:link
+   ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+7. **Run the Development Servers**
+   Start both the Laravel development server and Vite:
+   ```bash
+   php artisan serve
+   npm run dev
+   ```
 
-## Contributing
+## 🔒 Security
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This application follows strict security practices:
+- All forms are protected against CSRF attacks.
+- SQL injection is prevented via Eloquent ORM parameterized queries.
+- User inputs are heavily validated on the server side.
+- Payments and critical database updates are wrapped in secure transactions.
 
-## Code of Conduct
+## 👨‍💻 Credits
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**Designed & Developed by Madhu Verma**  
+Built with passion, precision, and code.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*© Chinhari Tattoo Studio. All rights reserved. Raipur, Chhattisgarh.*
