@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -100 120 200" fill="none" stroke="#8B1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Dancer matching user's exact reference style -->
+    <!-- Head, hair bun, and Neck -->
+    <circle cx="0" cy="-65" r="10" fill="#8B1E1E" stroke="none" />
+    <circle cx="12" cy="-70" r="5" fill="#8B1E1E" stroke="none" />
+    <path d="M 5,-72 Q 12,-80 18,-75" stroke-width="2" /> <!-- Hair decoration -->
+    <line x1="0" y1="-55" x2="0" y2="-45" stroke-width="4" />
+    
+    <!-- Torso (Two bold triangles) -->
+    <polygon points="0,-15 -20,-45 20,-45" fill="#8B1E1E" stroke="none" />
+    <polygon points="0,-15 -20,25 20,25" fill="#8B1E1E" stroke="none" />
+    
+    <!-- Left Arm (bent up) -->
+    <polyline points="-20,-45 -35,-25 -25,-10" />
+    
+    <!-- Right Arm (bent up and back) -->
+    <polyline points="20,-45 35,-55 25,-75" />
+    
+    <!-- Left Leg & Foot -->
+    <polyline points="-10,25 -20,50 0,75" />
+    <line x1="0" y1="75" x2="-15" y2="75" />
+    
+    <!-- Right Leg & Foot -->
+    <polyline points="10,25 25,45 15,70" />
+    <line x1="15" y1="70" x2="30" y2="70" />
+</svg>

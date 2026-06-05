@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#8B1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Human 1 -->
+    <g transform="translate(100, 150) scale(0.7)">
+        <circle cx="0" cy="-65" r="10" fill="#8B1E1E" stroke="none" />
+        <circle cx="12" cy="-70" r="5" fill="#8B1E1E" stroke="none" />
+        <path d="M 5,-72 Q 12,-80 18,-75" stroke-width="2" />
+        <line x1="0" y1="-55" x2="0" y2="-45" stroke-width="4" />
+        <polygon points="0,-15 -20,-45 20,-45" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-15 -20,25 20,25" fill="#8B1E1E" stroke="none" />
+        <polyline points="-20,-45 -35,-25 -25,-10" />
+        <polyline points="20,-45 35,-55 25,-75" />
+        <polyline points="-10,25 -20,50 0,75" />
+        <line x1="0" y1="75" x2="-15" y2="75" />
+        <polyline points="10,25 25,45 15,70" />
+        <line x1="15" y1="70" x2="30" y2="70" />
+    </g>
+
+    <!-- Deer -->
+    <g transform="translate(280, 280) scale(0.6)">
+        <polygon points="0,0 -25,15 -25,-15" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,0 25,15 25,-15" fill="#8B1E1E" stroke="none" />
+        <line x1="25" y1="-15" x2="35" y2="-35" stroke-width="4" />
+        <circle cx="38" cy="-38" r="5" fill="#8B1E1E" stroke="none" />
+        <path d="M 38,-43 Q 30,-55 20,-60" />
+        <path d="M 38,-43 Q 48,-55 55,-60" />
+        <path d="M 25,15 L 25,40" />
+        <path d="M 12,8 L 12,35" />
+        <path d="M -25,15 L -25,40" />
+        <path d="M -12,8 L -12,35" />
+        <line x1="-25" y1="-15" x2="-35" y2="-25" />
+    </g>
+
+    <!-- Plant -->
+    <g transform="translate(220, 360) scale(0.8)">
+        <line x1="0" y1="0" x2="0" y2="-90" />
+        <polygon points="0,-15 25,-25 0,-35" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-35 -25,-45 0,-55" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-55 25,-65 0,-75" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-75 -20,-85 0,-95" fill="#8B1E1E" stroke="none" />
+    </g>
+
+    <!-- Human 2 -->
+    <g transform="translate(280, 120) scale(0.5) rotate(10)">
+        <circle cx="0" cy="-65" r="10" fill="#8B1E1E" stroke="none" />
+        <circle cx="12" cy="-70" r="5" fill="#8B1E1E" stroke="none" />
+        <path d="M 5,-72 Q 12,-80 18,-75" stroke-width="2" />
+        <line x1="0" y1="-55" x2="0" y2="-45" stroke-width="4" />
+        <polygon points="0,-15 -20,-45 20,-45" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-15 -20,25 20,25" fill="#8B1E1E" stroke="none" />
+        <polyline points="-20,-45 -35,-25 -25,-10" />
+        <polyline points="20,-45 35,-55 25,-75" />
+        <polyline points="-10,25 -20,50 0,75" />
+        <line x1="0" y1="75" x2="-15" y2="75" />
+        <polyline points="10,25 25,45 15,70" />
+        <line x1="15" y1="70" x2="30" y2="70" />
+    </g>
+    
+    <!-- Plant 2 -->
+    <g transform="translate(80, 300) scale(0.5) rotate(-10)">
+        <line x1="0" y1="0" x2="0" y2="-90" />
+        <polygon points="0,-15 25,-25 0,-35" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-35 -25,-45 0,-55" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-55 25,-65 0,-75" fill="#8B1E1E" stroke="none" />
+        <polygon points="0,-75 -20,-85 0,-95" fill="#8B1E1E" stroke="none" />
+    </g>
+</svg>

@@ -51,11 +51,15 @@ Route::middleware(['auth', 'role:super-admin|admin|manager|artist|receptionist']
         Route::get('/bookings/calendar', fn() => view('admin.bookings.calendar'))->name('bookings.calendar');
         Route::get('/customers', fn() => view('admin.customers.index'))->name('customers');
         Route::get('/artists', fn() => view('admin.artists.index'))->name('artists');
-        Route::get('/portfolio', fn() => view('admin.portfolio.index'))->name('portfolio');
+        Route::get('/portfolio', [\App\Http\Controllers\Admin\PortfolioController::class, 'index'])->name('portfolio');
+        Route::get('/portfolio/create', [\App\Http\Controllers\Admin\PortfolioController::class, 'create'])->name('portfolio.create');
+        Route::post('/portfolio', [\App\Http\Controllers\Admin\PortfolioController::class, 'store'])->name('portfolio.store');
+        Route::delete('/portfolio/{portfolio}', [\App\Http\Controllers\Admin\PortfolioController::class, 'destroy'])->name('portfolio.destroy');
         Route::get('/invoices', fn() => view('admin.invoices.index'))->name('invoices');
         Route::get('/inventory', fn() => view('admin.inventory.index'))->name('inventory');
         Route::get('/crm', fn() => view('admin.crm.index'))->name('crm');
-        Route::get('/settings', fn() => view('admin.settings.index'))->name('settings');
+        Route::get('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('settings');
+        Route::put('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('settings.update');
     });
 
 // ── API: Slot Availability (for Booking Calendar) ──

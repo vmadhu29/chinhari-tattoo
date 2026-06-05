@@ -313,7 +313,7 @@ $value = context()->get($__contextArgs[0]); ?>": "https://schema.org",
                     <ul class="space-y-3">
                         <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = [
                             ['route' => 'about',     'label' => 'About Us'],
-                            ['route' => 'artists',   'label' => 'Our Artists'],
+                            ['route' => 'artists',   'label' => 'Our Artist'],
                             ['route' => 'portfolio', 'label' => 'Portfolio'],
                             ['route' => 'pricing',   'label' => 'Pricing'],
                             ['route' => 'blog',      'label' => 'Blog'],
@@ -369,7 +369,7 @@ $value = context()->get($__contextArgs[0]); ?>": "https://schema.org",
                             <svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             <div class="text-sm text-studio-muted">
                                 <p>Mon – Sunday</p>
-                                <p class="text-gold">10:00 AM – 9:00 PM</p>
+                                <p class="text-gold">10:00 AM – 10:00 PM</p>
                             </div>
                         </div>
                     </address>

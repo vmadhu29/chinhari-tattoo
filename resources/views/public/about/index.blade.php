@@ -6,12 +6,12 @@
     <div class="absolute inset-0 bg-ink-radial pointer-events-none" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div class="flex items-center justify-center gap-4 mb-4">
-            <div class="w-8 h-px bg-gold/60"></div>
-            <span class="text-gold text-xs tracking-[0.4em] uppercase font-semibold">Chinhari Tattoo Studio</span>
-            <div class="w-8 h-px bg-gold/60"></div>
+            <div class="w-8 h-px bg-verli/60"></div>
+            <span class="text-verli text-xs tracking-[0.4em] uppercase font-semibold">Chinhari Tattoo Studio</span>
+            <div class="w-8 h-px bg-verli/60"></div>
         </div>
         <h1 class="font-display text-5xl md:text-7xl text-studio-white tracking-wider mb-6">
-            OUR STORY & <span class="text-gold-gradient">PHILOSOPHY</span>
+            OUR STORY & <span class="text-verli-gradient">PHILOSOPHY</span>
         </h1>
         <p class="text-studio-muted text-lg max-w-2xl mx-auto leading-relaxed">
             Raipur's premier destination for custom tattoo art. We translate your life, beliefs, and memories into timeless ink.
@@ -25,7 +25,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-reveal>
                 <div class="section-eyebrow">Raipur's Pioneer</div>
-                <h2 id="story-heading" class="section-title mb-6">Artistry Crafted<br><span class="text-gold-gradient">With Passion & Precision</span></h2>
+                <h2 id="story-heading" class="section-title mb-6">Artistry Crafted<br><span class="text-verli-gradient">With Passion & Precision</span></h2>
                 <div class="space-y-4 text-studio-muted text-sm leading-relaxed">
                     <p>
                         Established in Raipur, Chhattisgarh, <strong>Chinhari Tattoo Studio</strong> has grown to become the benchmark of premium tattooing in the region. The name "Chinhari" translates to a "mark" or "souvenir" in the local Chhattisgarhi language — representing the meaningful marks we etch on our clients' skins.
@@ -42,7 +42,7 @@
                 <div class="aspect-square bg-studio-card rounded-2xl border border-studio-border flex items-center justify-center p-8 overflow-hidden shadow-card">
                     <div class="text-center">
                         <span class="text-6xl block mb-6 animate-float" aria-hidden="true">🏆</span>
-                        <h3 class="font-display text-2xl text-gold mb-2">Award-Winning Quality</h3>
+                        <h3 class="font-display text-2xl text-verli mb-2">Award-Winning Quality</h3>
                         <p class="text-studio-muted text-xs max-w-sm mx-auto">
                             Recognized for safety standards and custom composition design, bringing global standards of body art to Chhattisgarh.
                         </p>
@@ -58,7 +58,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-reveal>
             <div class="section-eyebrow justify-center">How We Work</div>
-            <h2 id="values-heading" class="section-title">Our Core<br><span class="text-gold-gradient">Principles</span></h2>
+            <h2 id="values-heading" class="section-title">Our Core<br><span class="text-verli-gradient">Principles</span></h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,8 +88,8 @@
             Consultations are free, and there is no obligation. Book your session to discuss design concept, placement, size, and cost.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('booking.create') }}" class="btn-gold">Book Consultation</a>
-            <a href="{{ route('artists') }}" class="btn-outline-gold">Meet the Artists</a>
+            <a href="{{ route('booking.create') }}" class="btn-verli">Book Consultation</a>
+            <a href="{{ route('artists') }}" class="btn-outline-verli">Meet the Artists</a>
         </div>
     </div>
 </section>

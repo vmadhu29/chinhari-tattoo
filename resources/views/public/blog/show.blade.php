@@ -5,7 +5,7 @@
     <div class="absolute inset-0 bg-ink-radial pointer-events-none" aria-hidden="true"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <a href="{{ route('blog') }}" class="inline-flex items-center text-sm text-gold hover:text-gold-light mb-8 group transition-colors">
+        <a href="{{ route('blog') }}" class="inline-flex items-center text-sm text-verli hover:text-verli-light mb-8 group transition-colors">
             <svg class="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
             Back to Blog
         </a>
@@ -13,7 +13,7 @@
         <article class="space-y-8" data-reveal>
             {{-- Meta Tags --}}
             <div class="space-y-4">
-                <span class="badge-gold text-xs px-2.5 py-1">{{ $blog->category->name }}</span>
+                <span class="badge-verli text-xs px-2.5 py-1">{{ $blog->category->name }}</span>
                 <h1 class="font-display text-4xl md:text-6xl text-studio-white tracking-wider leading-tight">
                     {{ $blog->title }}
                 </h1>
@@ -36,7 +36,7 @@
             </div>
 
             {{-- Excerpt --}}
-            <p class="text-studio-white text-lg font-medium leading-relaxed italic border-l-4 border-gold pl-6">
+            <p class="text-studio-white text-lg font-medium leading-relaxed italic border-l-4 border-verli pl-6">
                 {{ $blog->excerpt }}
             </p>
 
@@ -53,7 +53,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-reveal>
             <div class="section-eyebrow justify-center">Fresh Reads</div>
-            <h2 id="recent-heading" class="section-title">Recent <span class="text-gold-gradient">Articles</span></h2>
+            <h2 id="recent-heading" class="section-title">Recent <span class="text-verli-gradient">Articles</span></h2>
         </div>
 
         @if($recent->isEmpty())
@@ -76,15 +76,15 @@
                                     <span>•</span>
                                     <span>{{ $post->reading_time_minutes ?? 5 }} min read</span>
                                 </div>
-                                <h3 class="text-studio-white font-serif text-lg font-bold mb-3 hover:text-gold transition-colors">
+                                <h3 class="text-studio-white font-serif text-lg font-bold mb-3 hover:text-verli transition-colors">
                                     <a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a>
                                 </h3>
                                 <p class="text-studio-muted text-xs leading-relaxed line-clamp-3">{{ $post->excerpt }}</p>
                             </div>
                         </div>
                         <div class="p-6 pt-0 border-t border-studio-border/20 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-gold uppercase tracking-wider font-semibold">{{ $post->category->name }}</span>
-                            <a href="{{ route('blog.show', $post->slug) }}" class="text-xs text-studio-white hover:text-gold transition-colors font-semibold">Read Article →</a>
+                            <span class="text-xs text-verli uppercase tracking-wider font-semibold">{{ $post->category->name }}</span>
+                            <a href="{{ route('blog.show', $post->slug) }}" class="text-xs text-studio-white hover:text-verli transition-colors font-semibold">Read Article →</a>
                         </div>
                     </article>
                 @endforeach

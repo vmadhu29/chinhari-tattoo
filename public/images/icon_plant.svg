@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -100 100 100" stroke="#8B1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="0" y1="0" x2="0" y2="-90" />
+    <!-- Triangle leaves -->
+    <polygon points="0,-15 25,-25 0,-35" fill="#8B1E1E" stroke="none" />
+    <polygon points="0,-35 -25,-45 0,-55" fill="#8B1E1E" stroke="none" />
+    <polygon points="0,-55 25,-65 0,-75" fill="#8B1E1E" stroke="none" />
+    <polygon points="0,-75 -20,-85 0,-95" fill="#8B1E1E" stroke="none" />
+</svg>

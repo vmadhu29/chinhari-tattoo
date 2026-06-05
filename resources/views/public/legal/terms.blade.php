@@ -5,7 +5,7 @@
     <div class="absolute inset-0 bg-ink-radial pointer-events-none" aria-hidden="true"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h1 class="font-display text-4xl md:text-6xl text-studio-white tracking-wider mb-4">
-            TERMS OF <span class="text-gold-gradient">SERVICE</span>
+            TERMS OF <span class="text-verli-gradient">SERVICE</span>
         </h1>
         <p class="text-studio-muted text-sm">Last Updated: June 2026</p>
     </div>

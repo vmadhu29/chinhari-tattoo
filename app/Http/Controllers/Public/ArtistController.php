@@ -17,7 +17,7 @@ class ArtistController extends Controller
         SEOMeta::setDescription('Meet the award-winning tattoo artists at Chinhari Tattoo Studio in Raipur. Specialists in realism, portrait, geometric, mandala, and blackwork.');
         SEOMeta::setCanonical(route('artists'));
 
-        OpenGraph::setTitle('Chinhari Tattoo Studio - Meet Our Artists');
+        OpenGraph::setTitle('Chinhari Tattoo Studio - Meet Our Artist');
         OpenGraph::setDescription('Raipur\'s finest body artists, specializing in custom work, realism, Polynesian, blackwork, and fine lines.');
 
         return view('public.artists.index', compact('artists'));

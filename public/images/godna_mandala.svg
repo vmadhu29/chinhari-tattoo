@@ -1,0 +1,149 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" stroke="#8B1E1E" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <defs>
+        <!-- Individual Warli/Godna Dancer -->
+        <g id="dancer">
+            <!-- Head -->
+            <circle cx="0" cy="-105" r="7" fill="#8B1E1E" stroke="none" />
+            <!-- Hair bun (Traditional female dancer style) -->
+            <circle cx="6" cy="-108" r="3.5" fill="#8B1E1E" stroke="none" />
+            <!-- Hourglass Body (Two triangles touching at apex) -->
+            <polygon points="0,-80 -10,-95 10,-95" fill="#8B1E1E" stroke="none" />
+            <polygon points="0,-80 -10,-65 10,-65" fill="#8B1E1E" stroke="none" />
+            <!-- Arms stretched out to hold hands with adjacent dancers -->
+            <path d="M -10,-90 Q -24,-88 -34,-80" stroke="#8B1E1E" stroke-width="2.5" fill="none" />
+            <path d="M 10,-90 Q 24,-88 34,-80" stroke="#8B1E1E" stroke-width="2.5" fill="none" />
+            <!-- Legs bent in dancing pose -->
+            <path d="M 0,-65 Q -8,-50 -16,-40" stroke="#8B1E1E" stroke-width="2.5" fill="none" />
+            <path d="M 0,-65 Q 8,-50 16,-40" stroke="#8B1E1E" stroke-width="2.5" fill="none" />
+        </g>
+
+        <!-- Leaf vine element for border repeating -->
+        <g id="leaf-pair">
+            <path d="M 0,0 Q -10,-5 -15,0 Q -10,5 0,0" fill="#8B1E1E" stroke="none" />
+            <path d="M 0,0 Q 10,-5 15,0 Q 10,5 0,0" fill="#8B1E1E" stroke="none" />
+        </g>
+    </defs>
+
+    <!-- Outer Square Border -->
+    <rect x="25" y="25" width="550" height="550" stroke="#8B1E1E" stroke-width="3" fill="none" />
+    <rect x="35" y="35" width="530" height="530" stroke="#8B1E1E" stroke-width="1" stroke-dasharray="3,3" fill="none" />
+
+    <!-- Corner Squares -->
+    <rect x="15" y="15" width="10" height="10" fill="#8B1E1E" stroke="none" />
+    <rect x="575" y="15" width="10" height="10" fill="#8B1E1E" stroke="none" />
+    <rect x="15" y="575" width="10" height="10" fill="#8B1E1E" stroke="none" />
+    <rect x="575" y="575" width="10" height="10" fill="#8B1E1E" stroke="none" />
+
+    <!-- Leaf vines along borders -->
+    <!-- Top Border Leaves -->
+    <path d="M 50,25 L 550,25" stroke="#8B1E1E" stroke-width="1.5" />
+    <g transform="translate(100, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+    <g transform="translate(180, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+    <g transform="translate(260, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+    <g transform="translate(340, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+    <g transform="translate(420, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+    <g transform="translate(500, 25)"><use href="#leaf-pair" transform="rotate(45)" /></g>
+
+    <!-- Bottom Border Leaves -->
+    <path d="M 50,575 L 550,575" stroke="#8B1E1E" stroke-width="1.5" />
+    <g transform="translate(100, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+    <g transform="translate(180, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+    <g transform="translate(260, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+    <g transform="translate(340, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+    <g transform="translate(420, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+    <g transform="translate(500, 575)"><use href="#leaf-pair" transform="rotate(-45)" /></g>
+
+    <!-- Left Border Leaves -->
+    <path d="M 25,50 L 25,550" stroke="#8B1E1E" stroke-width="1.5" />
+    <g transform="translate(25, 100)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+    <g transform="translate(25, 180)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+    <g transform="translate(25, 260)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+    <g transform="translate(25, 340)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+    <g transform="translate(25, 420)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+    <g transform="translate(25, 500)"><use href="#leaf-pair" transform="rotate(135)" /></g>
+
+    <!-- Right Border Leaves -->
+    <path d="M 575,50 L 575,550" stroke="#8B1E1E" stroke-width="1.5" />
+    <g transform="translate(575, 100)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+    <g transform="translate(575, 180)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+    <g transform="translate(575, 260)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+    <g transform="translate(575, 340)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+    <g transform="translate(575, 420)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+    <g transform="translate(575, 500)"><use href="#leaf-pair" transform="rotate(-135)" /></g>
+
+    <!-- Outer Diamond (Tilted Square) -->
+    <polygon points="300,55 545,300 300,545 55,300" stroke="#8B1E1E" stroke-width="3" fill="none" />
+    <polygon points="300,70 530,300 300,530 70,300" stroke="#8B1E1E" stroke-width="1" stroke-dasharray="4,4" fill="none" />
+    <polygon points="300,80 520,300 300,520 80,300" stroke="#8B1E1E" stroke-width="1.5" fill="none" />
+
+    <!-- Corner Plants / Trees -->
+    <!-- Top-Left Corner Plant -->
+    <path d="M 75,75 L 170,170" stroke="#8B1E1E" stroke-width="2.5" />
+    <path d="M 95,95 Q 80,115 75,130" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 95,95 Q 115,80 130,75" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 120,120 Q 100,145 95,165" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 120,120 Q 145,100 165,95" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 145,145 Q 125,175 120,195" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 145,145 Q 175,125 195,120" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Top-Right Corner Plant -->
+    <path d="M 525,75 L 430,170" stroke="#8B1E1E" stroke-width="2.5" />
+    <path d="M 505,95 Q 520,115 525,130" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 505,95 Q 485,80 470,75" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 480,120 Q 500,145 505,165" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 480,120 Q 455,100 435,95" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,145 Q 475,175 480,195" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,145 Q 425,125 405,120" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Bottom-Left Corner Plant -->
+    <path d="M 75,525 L 170,430" stroke="#8B1E1E" stroke-width="2.5" />
+    <path d="M 95,505 Q 80,485 75,470" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 95,505 Q 115,520 130,525" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 120,480 Q 100,455 95,435" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 120,480 Q 145,500 165,505" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 145,455 Q 125,425 120,405" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 145,455 Q 175,475 195,480" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Bottom-Right Corner Plant -->
+    <path d="M 525,525 L 430,430" stroke="#8B1E1E" stroke-width="2.5" />
+    <path d="M 505,505 Q 520,485 525,470" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 505,505 Q 485,520 470,525" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 480,480 Q 500,455 505,435" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 480,480 Q 455,500 435,505" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,480 Q 475,455 480,435" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,480 Q 430,500 410,505" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,455 Q 475,425 480,405" stroke="#8B1E1E" stroke-width="2" />
+    <path d="M 455,455 Q 425,475 405,480" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Central Concentric Circles & Dancers Circle -->
+    <!-- Outer decorative circle -->
+    <circle cx="300" cy="300" r="160" stroke="#8B1E1E" stroke-width="1.5" stroke-dasharray="5,5" fill="none" />
+    <circle cx="300" cy="300" r="150" stroke="#8B1E1E" stroke-width="2" fill="none" />
+
+    <!-- Dancers ring (16 dancers) -->
+    <g>
+        <use href="#dancer" transform="translate(300, 300) rotate(0) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(22.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(45) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(67.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(90) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(112.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(135) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(157.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(180) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(202.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(225) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(247.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(270) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(292.5) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(315) translate(-300, -300)" />
+        <use href="#dancer" transform="translate(300, 300) rotate(337.5) translate(-300, -300)" />
+    </g>
+
+    <!-- Inner Concentric Rings -->
+    <circle cx="300" cy="300" r="50" stroke="#8B1E1E" stroke-width="2" fill="none" />
+    <circle cx="300" cy="300" r="42" stroke="#8B1E1E" stroke-width="1.5" stroke-dasharray="3,3" fill="none" />
+    <circle cx="300" cy="300" r="32" stroke="#8B1E1E" stroke-width="2" fill="none" />
+    <circle cx="300" cy="300" r="22" stroke="#8B1E1E" stroke-width="1" fill="none" />
+    <circle cx="300" cy="300" r="10" fill="#8B1E1E" stroke="none" />
+</svg>

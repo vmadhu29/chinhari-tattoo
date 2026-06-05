@@ -15,7 +15,7 @@ class PortfolioController extends Controller
     {
         $selectedStyle = $request->get('style');
         
-        $query = Portfolio::where('is_published', true)->orderBy('sort_order');
+        $query = Portfolio::where('is_published', true)->latest();
         
         if ($selectedStyle) {
             // Check if matches slug or text

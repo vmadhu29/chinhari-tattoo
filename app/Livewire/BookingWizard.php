@@ -319,7 +319,7 @@ class BookingWizard extends Component
             }
 
             session()->flash('success', 'Booking created successfully! Your slot has been reserved.');
-            return redirect()->route('customer.dashboard');
+            return redirect()->route('dashboard');
 
         } catch (\Exception $e) {
             DB::rollBack();

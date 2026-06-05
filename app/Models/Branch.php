@@ -13,10 +13,24 @@ class Branch extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'slug', 'address', 'city', 'state', 'pincode', 'phone',
-        'whatsapp', 'email', 'google_maps_url', 'google_place_id',
-        'latitude', 'longitude', 'working_hours', 'is_active',
-        'is_main_branch', 'meta_title', 'meta_description',
+        'name',
+        'slug',
+        'address',
+        'city',
+        'state',
+        'pincode',
+        'phone',
+        'whatsapp',
+        'email',
+        'google_maps_url',
+        'google_place_id',
+        'latitude',
+        'longitude',
+        'working_hours',
+        'is_active',
+        'is_main_branch',
+        'meta_title',
+        'meta_description',
     ];
 
     protected function casts(): array
@@ -52,6 +66,6 @@ class Branch extends Model
 
     public function getFormattedHoursAttribute(): string
     {
-        return 'Mon – Sun: 10:00 AM – 9:00 PM'; // Will be dynamic later
+        return 'Mon – Sun: 10:00 AM – 10:00 PM'; // Will be dynamic later
     }
 }

@@ -28,10 +28,10 @@ return [
 
     // Business Hours
     'hours' => [
-        'display'     => 'Mon – Sun: 10:00 AM – 9:00 PM',
+        'display'     => 'Mon – Sun: 10:00 AM – 10:00 PM',
         'open'        => '10:00',
         'close'       => '21:00',
-        'days'        => ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'],
+        'days'        => ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
         'timezone'    => 'Asia/Kolkata',
     ],
 
