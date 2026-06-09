@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<section class="py-20 bg-white border-t border-studio-border" aria-labelledby="inquiry-heading">
+<section class="py-20 bg-studio-black border-t border-studio-border" aria-labelledby="inquiry-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
@@ -94,19 +94,19 @@
                 <form id="contactForm" class="space-y-4">
                     <div>
                         <label for="name" class="block text-xs uppercase tracking-wider text-studio-muted mb-2 font-semibold">Full Name</label>
-                        <input type="text" id="name" required class="w-full bg-studio-black border border-studio-border rounded-lg px-4 py-3 text-sm text-studio-white focus:outline-none focus:border-verli">
+                        <input type="text" id="name" placeholder="John Doe" required minlength="2" maxlength="100" class="w-full bg-studio-black border border-studio-border/50 rounded-lg px-4 py-3 text-sm text-studio-white placeholder-gray-600 focus:outline-none focus:border-verli">
                     </div>
                     <div>
                         <label for="email" class="block text-xs uppercase tracking-wider text-studio-muted mb-2 font-semibold">Email Address</label>
-                        <input type="email" id="email" required class="w-full bg-studio-black border border-studio-border rounded-lg px-4 py-3 text-sm text-studio-white focus:outline-none focus:border-verli">
+                        <input type="email" id="email" placeholder="john@example.com" required maxlength="255" class="w-full bg-studio-black border border-studio-border/50 rounded-lg px-4 py-3 text-sm text-studio-white placeholder-gray-600 focus:outline-none focus:border-verli">
                     </div>
                     <div>
                         <label for="phone" class="block text-xs uppercase tracking-wider text-studio-muted mb-2 font-semibold">Phone Number</label>
-                        <input type="tel" id="phone" required class="w-full bg-studio-black border border-studio-border rounded-lg px-4 py-3 text-sm text-studio-white focus:outline-none focus:border-verli">
+                        <input type="tel" id="phone" placeholder="+91 90000 00000" required minlength="10" maxlength="15" pattern="^\+?[0-9\s\-]+$" title="Please enter a valid phone number (10-15 digits)" class="w-full bg-studio-black border border-studio-border/50 rounded-lg px-4 py-3 text-sm text-studio-white placeholder-gray-600 focus:outline-none focus:border-verli">
                     </div>
                     <div>
                         <label for="message" class="block text-xs uppercase tracking-wider text-studio-muted mb-2 font-semibold">Describe your design idea</label>
-                        <textarea id="message" rows="4" required placeholder="Size, style, body placement, etc." class="w-full bg-studio-black border border-studio-border rounded-lg px-4 py-3 text-sm text-studio-white focus:outline-none focus:border-verli"></textarea>
+                        <textarea id="message" rows="4" required minlength="10" maxlength="1500" placeholder="Size, style, body placement, etc." class="w-full bg-studio-black border border-studio-border/50 rounded-lg px-4 py-3 text-sm text-studio-white placeholder-gray-600 focus:outline-none focus:border-verli"></textarea>
                     </div>
                     <button type="submit" class="btn-verli w-full py-3 text-center text-sm font-semibold rounded-lg flex items-center justify-center gap-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

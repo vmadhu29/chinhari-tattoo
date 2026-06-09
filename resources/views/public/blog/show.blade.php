@@ -29,7 +29,7 @@
             {{-- Featured Image --}}
             <div class="rounded-2xl overflow-hidden border border-studio-border bg-studio-black">
                 <img 
-                    src="{{ $blog->featured_image ? asset('storage/'.$blog->featured_image) : 'https://picsum.photos/800/500?random=1' }}" 
+                    src="{{ $blog->featured_image ? (Str::startsWith($blog->featured_image, 'http') ? $blog->featured_image : asset('storage/'.$blog->featured_image)) : 'https://picsum.photos/1200/600?random=1' }}" 
                     alt="{{ $blog->title }}"
                     class="w-full h-auto object-cover max-h-[500px]"
                 >
@@ -42,7 +42,7 @@
 
             {{-- Content --}}
             <div class="text-studio-muted text-sm md:text-base leading-relaxed space-y-6 pt-4">
-                {!! nl2br(e($blog->content)) !!}
+                {!! nl2br($blog->content) !!}
             </div>
         </article>
     </div>
@@ -61,30 +61,30 @@
         @else
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($recent as $i => $post)
-                    <article class="card p-0 rounded-2xl border border-studio-border bg-studio-darker overflow-hidden flex flex-col justify-between" data-reveal data-delay="{{ $i * 100 }}">
-                        <div>
-                            <div class="aspect-video bg-studio-card overflow-hidden relative">
+                    <article class="group card p-0 rounded-2xl border border-studio-border bg-studio-darker hover:border-verli/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col h-full shadow-lg" data-reveal data-delay="{{ $i * 100 }}">
+                        <div class="flex-1 flex flex-col">
+                            <div class="aspect-video bg-studio-black overflow-hidden relative">
                                 <img 
-                                    src="{{ $post->featured_image ? asset('storage/'.$post->featured_image) : 'https://picsum.photos/600/400?random='.$i }}" 
+                                    src="{{ $post->featured_image ? (Str::startsWith($post->featured_image, 'http') ? $post->featured_image : asset('storage/'.$post->featured_image)) : 'https://picsum.photos/600/400?random='.$i }}" 
                                     alt="{{ $post->title }}"
-                                    class="w-full h-full object-cover"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 >
                             </div>
-                            <div class="p-6">
+                            <div class="p-6 flex-1 flex flex-col">
                                 <div class="flex items-center gap-4 text-xs text-studio-faint mb-3">
                                     <span>{{ $post->published_at ? $post->published_at->format('M d, Y') : $post->created_at->format('M d, Y') }}</span>
                                     <span>•</span>
                                     <span>{{ $post->reading_time_minutes ?? 5 }} min read</span>
                                 </div>
-                                <h3 class="text-studio-white font-serif text-lg font-bold mb-3 hover:text-verli transition-colors">
+                                <h3 class="text-studio-white font-serif text-lg font-bold mb-3 group-hover:text-verli transition-colors line-clamp-2">
                                     <a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a>
                                 </h3>
                                 <p class="text-studio-muted text-xs leading-relaxed line-clamp-3">{{ $post->excerpt }}</p>
                             </div>
                         </div>
-                        <div class="p-6 pt-0 border-t border-studio-border/20 mt-4 flex items-center justify-between">
+                        <div class="p-6 pt-4 border-t border-studio-border/20 mt-auto flex items-center justify-between">
                             <span class="text-xs text-verli uppercase tracking-wider font-semibold">{{ $post->category->name }}</span>
-                            <a href="{{ route('blog.show', $post->slug) }}" class="text-xs text-studio-white hover:text-verli transition-colors font-semibold">Read Article →</a>
+                            <a href="{{ route('blog.show', $post->slug) }}" class="text-xs text-studio-white group-hover:text-verli transition-colors font-semibold">Read Article →</a>
                         </div>
                     </article>
                 @endforeach

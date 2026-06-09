@@ -10,9 +10,9 @@
 @layer base {
     :root {
         color-scheme: light;
-        --verli: #8B1E1E;
-        --verli-light: #A83232;
-        --verli-dark: #5C1010;
+        --verli: #FFC107;
+        --verli-light: #FFD54F;
+        --verli-dark: #FFA000;
         --verli-pale: #F5E8E8;
     }
 
@@ -69,22 +69,22 @@
 
     /* Primary: Verli Red fill */
     .btn-verli {
-        @apply btn px-7 py-3.5 text-white font-bold shadow-sm active:scale-95 transition-all duration-300;
-        background: linear-gradient(135deg, #8B1E1E 0%, #A83232 100%);
+        @apply btn px-7 py-3.5 text-studio-black font-bold shadow-sm active:scale-95 transition-all duration-300;
+        background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
     }
     .btn-verli:hover {
-        background: linear-gradient(135deg, #A83232 0%, #8B1E1E 100%);
-        box-shadow: 0 4px 20px rgba(139, 30, 30, 0.35);
+        background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+        box-shadow: 0 4px 20px rgba(255, 193, 7, 0.35);
     }
 
     /* Alias: btn-gold → btn-verli for backwards compat */
     .btn-gold {
-        @apply btn px-7 py-3.5 text-white font-bold shadow-sm active:scale-95 transition-all duration-300;
-        background: linear-gradient(135deg, #8B1E1E 0%, #A83232 100%);
+        @apply btn px-7 py-3.5 text-studio-black font-bold shadow-sm active:scale-95 transition-all duration-300;
+        background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
     }
     .btn-gold:hover {
-        background: linear-gradient(135deg, #A83232 0%, #8B1E1E 100%);
-        box-shadow: 0 4px 20px rgba(139, 30, 30, 0.35);
+        background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+        box-shadow: 0 4px 20px rgba(255, 193, 7, 0.35);
     }
 
     .btn-outline-verli {
@@ -96,16 +96,16 @@
     .btn-outline-gold {
         @apply btn px-7 py-3.5 border text-verli
                hover:bg-verli/10 active:scale-95;
-        border-color: rgba(139,30,30,0.6);
+        border-color: rgba(255,193,7,0.6);
     }
     .btn-outline-gold:hover {
-        border-color: #8B1E1E;
+        border-color: #FFC107;
     }
 
     .btn-crimson {
-        @apply btn px-7 py-3.5 bg-verli text-white
+        @apply btn px-7 py-3.5 bg-verli text-studio-black
                hover:bg-verli-light active:scale-95;
-        box-shadow: 0 0 20px rgba(139, 30, 30, 0.2);
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
     }
 
     .btn-ghost {
@@ -134,13 +134,13 @@
 
     .card-glass {
         @apply rounded-2xl border shadow-glass backdrop-blur-md;
-        border-color: rgba(139,30,30,0.12);
-        background: rgba(255,255,255,0.85);
+        border-color: rgba(255,193,7,0.12);
+        background: rgba(30,30,30,0.85);
     }
 
     .card-glass:hover {
-        border-color: rgba(139,30,30,0.25);
-        background: rgba(255,255,255,0.95);
+        border-color: rgba(255,193,7,0.25);
+        background: rgba(40,40,40,0.95);
     }
 
     /* ── Section Dividers ── */
@@ -176,8 +176,8 @@
     }
     .input:focus {
         outline: none;
-        border-color: #8B1E1E;
-        box-shadow: 0 0 0 1px rgba(139,30,30,0.3);
+        border-color: #FFC107;
+        box-shadow: 0 0 0 1px rgba(255,193,7,0.3);
     }
 
     .input-label {
@@ -190,7 +190,7 @@
 
     .select {
         @apply input appearance-none cursor-pointer;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238B1E1E' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFC107' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 1rem center;
         background-size: 1rem;
@@ -200,14 +200,14 @@
     /* ── Section Titles ── */
     .section-eyebrow {
         @apply inline-flex items-center gap-2.5 text-xs font-semibold tracking-widest uppercase mb-4;
-        color: #8B1E1E;
+        color: #FFC107;
     }
 
     .section-eyebrow::before,
     .section-eyebrow::after {
         content: '';
         @apply block w-8 h-px;
-        background-color: rgba(139,30,30,0.4);
+        background-color: rgba(255,193,7,0.4);
     }
 
     .section-title {
@@ -220,7 +220,7 @@
 
     /* ── Tribal Red Text Gradient ── */
     .text-gold-gradient {
-        background: linear-gradient(135deg, #8B1E1E 0%, #C04040 50%, #8B1E1E 100%);
+        background: linear-gradient(135deg, #FFC107 0%, #FFECB3 50%, #FFC107 100%);
         background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -228,7 +228,7 @@
     }
 
     .text-verli-gradient {
-        background: linear-gradient(135deg, #8B1E1E 0%, #C04040 50%, #8B1E1E 100%);
+        background: linear-gradient(135deg, #FFC107 0%, #FFECB3 50%, #FFC107 100%);
         background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -245,7 +245,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(139,30,30,0.04) 0%, transparent 70%);
+        background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255,193,7,0.04) 0%, transparent 70%);
         pointer-events: none;
     }
 
@@ -257,7 +257,7 @@
     .link-underline::after {
         content: '';
         @apply absolute -bottom-0.5 left-0 w-0 h-px transition-all duration-300;
-        background-color: #8B1E1E;
+        background-color: #FFC107;
     }
 
     .link-underline:hover::after {
@@ -266,17 +266,17 @@
 
     /* ── White Glassmorphism Nav ── */
     .glass-nav {
-        background: rgba(255, 255, 255, 0.92);
+        background: rgba(10, 10, 10, 0.92);
         backdrop-filter: blur(20px) saturate(180%);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
-        border-bottom: 1px solid rgba(139, 30, 30, 0.12);
-        box-shadow: 0 2px 20px rgba(139, 30, 30, 0.06);
+        border-bottom: 1px solid rgba(255, 193, 7, 0.12);
+        box-shadow: 0 2px 20px rgba(255, 193, 7, 0.06);
     }
 
     /* ── Stats Counter ── */
     .stat-number {
         @apply font-display text-5xl md:text-6xl leading-none tracking-wider;
-        color: #8B1E1E;
+        color: #FFC107;
     }
 
     .stat-label {
@@ -338,10 +338,10 @@
     }
 
     .booking-step-number.active {
-        border-color: #8B1E1E;
-        background-color: #8B1E1E;
+        border-color: #FFC107;
+        background-color: #FFC107;
         @apply text-white;
-        box-shadow: 0 0 10px rgba(139,30,30,0.3);
+        box-shadow: 0 0 10px rgba(255,193,7,0.3);
     }
 
     .booking-step-number.completed {
@@ -356,12 +356,12 @@
     .fc { @apply font-sans; }
     .fc .fc-toolbar-title { @apply text-studio-white font-display text-2xl tracking-wider; }
     .fc .fc-button { @apply bg-studio-card border-studio-border text-studio-gray hover:bg-studio-hover transition-all duration-200 !important; }
-    .fc .fc-button-primary:not(:disabled).fc-button-active { background-color: #8B1E1E !important; border-color: #8B1E1E !important; @apply text-white !important; }
+    .fc .fc-button-primary:not(:disabled).fc-button-active { background-color: #FFC107 !important; border-color: #FFC107 !important; @apply text-white !important; }
     .fc .fc-daygrid-day { @apply bg-studio-charcoal border-studio-border; }
     .fc .fc-col-header-cell { @apply bg-studio-darker; }
     .fc .fc-event { @apply rounded-md text-xs font-medium; }
     .fc .fc-event.available { @apply bg-green-500/20 border-green-500/40 text-green-600; }
-    .fc .fc-event.booked { background: rgba(139,30,30,0.15); border-color: rgba(139,30,30,0.3); color: #8B1E1E; }
+    .fc .fc-event.booked { background: rgba(255,193,7,0.15); border-color: rgba(255,193,7,0.3); color: #FFC107; }
     .fc .fc-event.blocked { @apply bg-gray-200 border-gray-300 text-gray-500; }
 
     /* ── Loader / Skeleton ── */
@@ -386,9 +386,9 @@
     }
 
     .admin-nav-item.active {
-        color: #8B1E1E;
-        background-color: rgba(139,30,30,0.08);
-        border: 1px solid rgba(139,30,30,0.2);
+        color: #FFC107;
+        background-color: rgba(255,193,7,0.08);
+        border: 1px solid rgba(255,193,7,0.2);
     }
 
     /* ── Revenue/Stats Cards ── */
@@ -399,19 +399,19 @@
     .metric-card::before {
         content: '';
         @apply absolute top-0 right-0 w-32 h-32 rounded-full opacity-10;
-        background: radial-gradient(circle, #8B1E1E 0%, transparent 70%);
+        background: radial-gradient(circle, #FFC107 0%, transparent 70%);
         transform: translate(50%, -50%);
     }
 
     /* ── Tribal Pattern Background ── */
     .tribal-bg {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238B1E1E' stroke-width='0.4' opacity='0.15'%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Cpath d='M30 18 L30 42 M18 30 L42 30'/%3E%3Cpath d='M21.5 21.5 L38.5 38.5 M38.5 21.5 L21.5 38.5'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFC107' stroke-width='0.4' opacity='0.15'%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Cpath d='M30 18 L30 42 M18 30 L42 30'/%3E%3Cpath d='M21.5 21.5 L38.5 38.5 M38.5 21.5 L21.5 38.5'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
         background-size: 60px 60px;
     }
 
     /* ── Global Godna Overlay ── */
     .godna-bg {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%238B1E1E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='translate(150, 150) scale(0.6)'%3E%3Ccircle cx='0' cy='-65' r='10' fill='%238B1E1E' stroke='none' /%3E%3Ccircle cx='12' cy='-70' r='5' fill='%238B1E1E' stroke='none' /%3E%3Cpath d='M 5,-72 Q 12,-80 18,-75' stroke-width='2' /%3E%3Cline x1='0' y1='-55' x2='0' y2='-45' stroke-width='4' /%3E%3Cpolygon points='0,-15 -20,-45 20,-45' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-15 -20,25 20,25' fill='%238B1E1E' stroke='none' /%3E%3Cpolyline points='-20,-45 -35,-25 -25,-10' /%3E%3Cpolyline points='20,-45 35,-55 25,-75' /%3E%3Cpolyline points='-10,25 -20,50 0,75' /%3E%3Cline x1='0' y1='75' x2='-15' y2='75' /%3E%3Cpolyline points='10,25 25,45 15,70' /%3E%3Cline x1='15' y1='70' x2='30' y2='70' /%3E%3C/g%3E%3Cg transform='translate(400, 150) scale(0.6)'%3E%3Ccircle cx='0' cy='0' r='14' fill='%238B1E1E' stroke='none' /%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke-width='2' stroke-dasharray='2 6' /%3E%3Cline x1='0' y1='-30' x2='0' y2='-45' /%3E%3Cline x1='0' y1='30' x2='0' y2='45' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='0' /%3E%3Cline x1='30' y1='0' x2='45' y2='0' /%3E%3Cline x1='-20' y1='-20' x2='-35' y2='-35' /%3E%3Cline x1='20' y1='20' x2='35' y2='35' /%3E%3Cline x1='-20' y1='20' x2='-35' y2='35' /%3E%3Cline x1='20' y1='-20' x2='35' y2='-35' /%3E%3C/g%3E%3Cg transform='translate(650, 150) scale(0.6)'%3E%3Cpolygon points='0,0 -25,15 -25,-15' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,0 25,15 25,-15' fill='%238B1E1E' stroke='none' /%3E%3Cline x1='25' y1='-15' x2='35' y2='-35' stroke-width='4' /%3E%3Ccircle cx='38' cy='-38' r='5' fill='%238B1E1E' stroke='none' /%3E%3Cpath d='M 38,-43 Q 30,-55 20,-60' /%3E%3Cpath d='M 38,-43 Q 48,-55 55,-60' /%3E%3Cpath d='M 25,15 L 25,40' /%3E%3Cpath d='M 12,8 L 12,35' /%3E%3Cpath d='M -25,15 L -25,40' /%3E%3Cpath d='M -12,8 L -12,35' /%3E%3Cline x1='-25' y1='-15' x2='-35' y2='-25' /%3E%3C/g%3E%3Cg transform='translate(150, 450) scale(0.7)'%3E%3Cline x1='0' y1='0' x2='0' y2='-90' /%3E%3Cpolygon points='0,-15 25,-25 0,-35' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-35 -25,-45 0,-55' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-55 25,-65 0,-75' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-75 -20,-85 0,-95' fill='%238B1E1E' stroke='none' /%3E%3C/g%3E%3Cg transform='translate(400, 450) scale(0.7)'%3E%3Cpolygon points='0,-40 -50,10 50,10' fill='none' stroke-width='4' /%3E%3Cline x1='-25' y1='-15' x2='-25' y2='10' stroke-width='2' /%3E%3Cline x1='25' y1='-15' x2='25' y2='10' stroke-width='2' /%3E%3Cline x1='0' y1='-40' x2='0' y2='10' stroke-width='2' /%3E%3Crect x='-40' y='10' width='80' height='40' fill='none' stroke-width='4' /%3E%3Crect x='-10' y='25' width='20' height='25' fill='%238B1E1E' stroke='none' /%3E%3C/g%3E%3Cg transform='translate(650, 450) scale(0.7)'%3E%3Cpolygon points='0,0 -30,10 -30,-10' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,0 20,10 20,-10' fill='%238B1E1E' stroke='none' /%3E%3Ccircle cx='28' cy='-15' r='6' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='32,-15 45,-12 32,-10' fill='%238B1E1E' stroke='none' /%3E%3Cline x1='-15' y1='10' x2='-15' y2='35' stroke-width='4' /%3E%3Cline x1='-15' y1='35' x2='-25' y2='45' stroke-width='4' /%3E%3Cline x1='-15' y1='35' x2='-5' y2='45' stroke-width='4' /%3E%3Cline x1='5' y1='10' x2='5' y2='30' stroke-width='4' /%3E%3Cline x1='5' y1='30' x2='-5' y2='40' stroke-width='4' /%3E%3Cline x1='5' y1='30' x2='15' y2='40' stroke-width='4' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='-10' stroke-width='4' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='10' stroke-width='4' /%3E%3C/g%3E%3Cg transform='translate(150, 750) scale(0.5)'%3E%3Ccircle cx='0' cy='-65' r='14' fill='%238B1E1E' stroke='none' /%3E%3Cline x1='0' y1='-51' x2='0' y2='-45' stroke-width='6' /%3E%3Cpolygon points='0,-15 -25,-45 25,-45' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-15 -25,25 25,25' fill='%238B1E1E' stroke='none' /%3E%3Cpolyline points='-25,-45 -40,-15 -20,-5' /%3E%3Cline x1='-20' y1='-5' x2='-5' y2='10' stroke-width='3' /%3E%3Ccircle cx='-5' cy='10' r='4' fill='%238B1E1E' stroke='none' /%3E%3Cpolyline points='25,-45 40,-20 15,-10' /%3E%3Cline x1='15' y1='-10' x2='-5' y2='-20' stroke-width='3' /%3E%3Ccircle cx='-5' cy='-20' r='4' fill='%238B1E1E' stroke='none' /%3E%3Cpolyline points='-10,25 -25,50 -5,80' /%3E%3Cline x1='-5' y1='80' x2='-20' y2='80' /%3E%3Cpolyline points='10,25 30,50 15,80' /%3E%3Cline x1='15' y1='80' x2='30' y2='80' /%3E%3C/g%3E%3Cg transform='translate(400, 750) scale(0.6) rotate(15)'%3E%3Ccircle cx='0' cy='-65' r='10' fill='%238B1E1E' stroke='none' /%3E%3Ccircle cx='12' cy='-70' r='5' fill='%238B1E1E' stroke='none' /%3E%3Cpath d='M 5,-72 Q 12,-80 18,-75' stroke-width='2' /%3E%3Cline x1='0' y1='-55' x2='0' y2='-45' stroke-width='4' /%3E%3Cpolygon points='0,-15 -20,-45 20,-45' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-15 -20,25 20,25' fill='%238B1E1E' stroke='none' /%3E%3Cpolyline points='-20,-45 -35,-25 -25,-10' /%3E%3Cpolyline points='20,-45 35,-55 25,-75' /%3E%3Cpolyline points='-10,25 -20,50 0,75' /%3E%3Cline x1='0' y1='75' x2='-15' y2='75' /%3E%3Cpolyline points='10,25 25,45 15,70' /%3E%3Cline x1='15' y1='70' x2='30' y2='70' /%3E%3C/g%3E%3Cg transform='translate(650, 750) scale(0.6) rotate(-10)'%3E%3Cline x1='0' y1='0' x2='0' y2='-90' /%3E%3Cpolygon points='0,-15 25,-25 0,-35' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-35 -25,-45 0,-55' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-55 25,-65 0,-75' fill='%238B1E1E' stroke='none' /%3E%3Cpolygon points='0,-75 -20,-85 0,-95' fill='%238B1E1E' stroke='none' /%3E%3C/g%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%23FFC107' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='translate(150, 150) scale(0.6)'%3E%3Ccircle cx='0' cy='-65' r='10' fill='%23FFC107' stroke='none' /%3E%3Ccircle cx='12' cy='-70' r='5' fill='%23FFC107' stroke='none' /%3E%3Cpath d='M 5,-72 Q 12,-80 18,-75' stroke-width='2' /%3E%3Cline x1='0' y1='-55' x2='0' y2='-45' stroke-width='4' /%3E%3Cpolygon points='0,-15 -20,-45 20,-45' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-15 -20,25 20,25' fill='%23FFC107' stroke='none' /%3E%3Cpolyline points='-20,-45 -35,-25 -25,-10' /%3E%3Cpolyline points='20,-45 35,-55 25,-75' /%3E%3Cpolyline points='-10,25 -20,50 0,75' /%3E%3Cline x1='0' y1='75' x2='-15' y2='75' /%3E%3Cpolyline points='10,25 25,45 15,70' /%3E%3Cline x1='15' y1='70' x2='30' y2='70' /%3E%3C/g%3E%3Cg transform='translate(400, 150) scale(0.6)'%3E%3Ccircle cx='0' cy='0' r='14' fill='%23FFC107' stroke='none' /%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke-width='2' stroke-dasharray='2 6' /%3E%3Cline x1='0' y1='-30' x2='0' y2='-45' /%3E%3Cline x1='0' y1='30' x2='0' y2='45' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='0' /%3E%3Cline x1='30' y1='0' x2='45' y2='0' /%3E%3Cline x1='-20' y1='-20' x2='-35' y2='-35' /%3E%3Cline x1='20' y1='20' x2='35' y2='35' /%3E%3Cline x1='-20' y1='20' x2='-35' y2='35' /%3E%3Cline x1='20' y1='-20' x2='35' y2='-35' /%3E%3C/g%3E%3Cg transform='translate(650, 150) scale(0.6)'%3E%3Cpolygon points='0,0 -25,15 -25,-15' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,0 25,15 25,-15' fill='%23FFC107' stroke='none' /%3E%3Cline x1='25' y1='-15' x2='35' y2='-35' stroke-width='4' /%3E%3Ccircle cx='38' cy='-38' r='5' fill='%23FFC107' stroke='none' /%3E%3Cpath d='M 38,-43 Q 30,-55 20,-60' /%3E%3Cpath d='M 38,-43 Q 48,-55 55,-60' /%3E%3Cpath d='M 25,15 L 25,40' /%3E%3Cpath d='M 12,8 L 12,35' /%3E%3Cpath d='M -25,15 L -25,40' /%3E%3Cpath d='M -12,8 L -12,35' /%3E%3Cline x1='-25' y1='-15' x2='-35' y2='-25' /%3E%3C/g%3E%3Cg transform='translate(150, 450) scale(0.7)'%3E%3Cline x1='0' y1='0' x2='0' y2='-90' /%3E%3Cpolygon points='0,-15 25,-25 0,-35' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-35 -25,-45 0,-55' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-55 25,-65 0,-75' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-75 -20,-85 0,-95' fill='%23FFC107' stroke='none' /%3E%3C/g%3E%3Cg transform='translate(400, 450) scale(0.7)'%3E%3Cpolygon points='0,-40 -50,10 50,10' fill='none' stroke-width='4' /%3E%3Cline x1='-25' y1='-15' x2='-25' y2='10' stroke-width='2' /%3E%3Cline x1='25' y1='-15' x2='25' y2='10' stroke-width='2' /%3E%3Cline x1='0' y1='-40' x2='0' y2='10' stroke-width='2' /%3E%3Crect x='-40' y='10' width='80' height='40' fill='none' stroke-width='4' /%3E%3Crect x='-10' y='25' width='20' height='25' fill='%23FFC107' stroke='none' /%3E%3C/g%3E%3Cg transform='translate(650, 450) scale(0.7)'%3E%3Cpolygon points='0,0 -30,10 -30,-10' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,0 20,10 20,-10' fill='%23FFC107' stroke='none' /%3E%3Ccircle cx='28' cy='-15' r='6' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='32,-15 45,-12 32,-10' fill='%23FFC107' stroke='none' /%3E%3Cline x1='-15' y1='10' x2='-15' y2='35' stroke-width='4' /%3E%3Cline x1='-15' y1='35' x2='-25' y2='45' stroke-width='4' /%3E%3Cline x1='-15' y1='35' x2='-5' y2='45' stroke-width='4' /%3E%3Cline x1='5' y1='10' x2='5' y2='30' stroke-width='4' /%3E%3Cline x1='5' y1='30' x2='-5' y2='40' stroke-width='4' /%3E%3Cline x1='5' y1='30' x2='15' y2='40' stroke-width='4' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='-10' stroke-width='4' /%3E%3Cline x1='-30' y1='0' x2='-45' y2='10' stroke-width='4' /%3E%3C/g%3E%3Cg transform='translate(150, 750) scale(0.5)'%3E%3Ccircle cx='0' cy='-65' r='14' fill='%23FFC107' stroke='none' /%3E%3Cline x1='0' y1='-51' x2='0' y2='-45' stroke-width='6' /%3E%3Cpolygon points='0,-15 -25,-45 25,-45' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-15 -25,25 25,25' fill='%23FFC107' stroke='none' /%3E%3Cpolyline points='-25,-45 -40,-15 -20,-5' /%3E%3Cline x1='-20' y1='-5' x2='-5' y2='10' stroke-width='3' /%3E%3Ccircle cx='-5' cy='10' r='4' fill='%23FFC107' stroke='none' /%3E%3Cpolyline points='25,-45 40,-20 15,-10' /%3E%3Cline x1='15' y1='-10' x2='-5' y2='-20' stroke-width='3' /%3E%3Ccircle cx='-5' cy='-20' r='4' fill='%23FFC107' stroke='none' /%3E%3Cpolyline points='-10,25 -25,50 -5,80' /%3E%3Cline x1='-5' y1='80' x2='-20' y2='80' /%3E%3Cpolyline points='10,25 30,50 15,80' /%3E%3Cline x1='15' y1='80' x2='30' y2='80' /%3E%3C/g%3E%3Cg transform='translate(400, 750) scale(0.6) rotate(15)'%3E%3Ccircle cx='0' cy='-65' r='10' fill='%23FFC107' stroke='none' /%3E%3Ccircle cx='12' cy='-70' r='5' fill='%23FFC107' stroke='none' /%3E%3Cpath d='M 5,-72 Q 12,-80 18,-75' stroke-width='2' /%3E%3Cline x1='0' y1='-55' x2='0' y2='-45' stroke-width='4' /%3E%3Cpolygon points='0,-15 -20,-45 20,-45' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-15 -20,25 20,25' fill='%23FFC107' stroke='none' /%3E%3Cpolyline points='-20,-45 -35,-25 -25,-10' /%3E%3Cpolyline points='20,-45 35,-55 25,-75' /%3E%3Cpolyline points='-10,25 -20,50 0,75' /%3E%3Cline x1='0' y1='75' x2='-15' y2='75' /%3E%3Cpolyline points='10,25 25,45 15,70' /%3E%3Cline x1='15' y1='70' x2='30' y2='70' /%3E%3C/g%3E%3Cg transform='translate(650, 750) scale(0.6) rotate(-10)'%3E%3Cline x1='0' y1='0' x2='0' y2='-90' /%3E%3Cpolygon points='0,-15 25,-25 0,-35' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-35 -25,-45 0,-55' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-55 25,-65 0,-75' fill='%23FFC107' stroke='none' /%3E%3Cpolygon points='0,-75 -20,-85 0,-95' fill='%23FFC107' stroke='none' /%3E%3C/g%3E%3C/svg%3E");
         background-repeat: repeat;
         background-size: 450px;
         opacity: 0.15;
@@ -447,12 +447,12 @@
     /* Verli red line decorators */
     .verli-line-left {
         padding-left: 1rem;
-        border-left: 2px solid #8B1E1E;
+        border-left: 2px solid #FFC107;
     }
 
     .gold-line-left {
         padding-left: 1rem;
-        border-left: 2px solid #8B1E1E;
+        border-left: 2px solid #FFC107;
     }
 
     .verli-line-bottom::after {
@@ -460,7 +460,7 @@
         display: block;
         width: 3rem;
         height: 2px;
-        background-color: #8B1E1E;
+        background-color: #FFC107;
         margin-top: 1rem;
     }
 
@@ -469,7 +469,7 @@
         display: block;
         width: 3rem;
         height: 2px;
-        background-color: #8B1E1E;
+        background-color: #FFC107;
         margin-top: 1rem;
     }
 

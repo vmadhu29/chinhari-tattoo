@@ -19,7 +19,7 @@ return [
 
     // Maps
     'google_maps_url'       => env('STUDIO_GOOGLE_MAPS_URL', 'https://maps.app.goo.gl/FthHoox4rfMViKoLA'),
-    'google_maps_embed_url' => env('STUDIO_GOOGLE_MAPS_EMBED_URL', ''),
+    'google_maps_embed_url' => env('STUDIO_GOOGLE_MAPS_EMBED_URL', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083148285!2d81.6050091!3d21.2497222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dda23be28229%3A0x1634f1ec7e584f16!2sChinhari%20Tattoo%20Studio!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin'),
     'google_maps_api_key'   => env('GOOGLE_MAPS_API_KEY', ''),
 
     // Coordinates

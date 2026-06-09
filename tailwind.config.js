@@ -17,49 +17,48 @@ export default {
     theme: {
         extend: {
             colors: {
-                // Primary Light Backgrounds — White / Cream
-                'studio-black':   '#FFFFFF',
-                'studio-darker':  '#FFFFFF',
-                'studio-dark':    '#FFFFFF',
-                'studio-charcoal':'#FFFFFF',
-                'studio-card':    '#FFFFFF',
-                'studio-border':  'rgba(139, 30, 30, 0.15)',
-                'studio-hover':   'rgba(139, 30, 30, 0.05)',
+                // Dark Backgrounds
+                'studio-black':   '#0A0A0A',
+                'studio-darker':  '#121212',
+                'studio-dark':    '#1A1A1A',
+                'studio-charcoal':'#242424',
+                'studio-card':    '#1E1E1E',
+                'studio-border':  'rgba(245, 176, 65, 0.15)',
+                'studio-hover':   'rgba(245, 176, 65, 0.05)',
 
-                // Verli Red Palette — Chhattisgarh Tribal (#8B1E1E)
+                // Gold Palette (Matched to logo)
                 'verli': {
-                    DEFAULT: '#8B1E1E',
-                    light:   '#A83232',
-                    bright:  '#C04040',
-                    dark:    '#5C1010',
-                    muted:   '#6E1A1A',
-                    pale:    '#F5E8E8',
-                    faint:   '#FAF0F0',
+                    DEFAULT: '#FFC107',
+                    light:   '#FFD54F',
+                    bright:  '#FFECB3',
+                    dark:    '#FFA000',
+                    muted:   '#FF8F00',
+                    pale:    '#FFF8E1',
+                    faint:   '#FFFCF4',
                 },
 
-                // Keep crimson for backwards compat (aliases to verli)
+                // Aliases
                 'crimson': {
-                    DEFAULT: '#8B1E1E',
-                    light:   '#A83232',
-                    bright:  '#C04040',
-                    dark:    '#5C1010',
-                    muted:   '#6E1A1A',
+                    DEFAULT: '#FFC107',
+                    light:   '#FFD54F',
+                    bright:  '#FFECB3',
+                    dark:    '#FFA000',
+                    muted:   '#FF8F00',
                 },
 
-                // Gold — kept but secondary (used for Google stars, etc.)
                 'gold': {
-                    DEFAULT: '#8B1E1E',
-                    light:   '#A83232',
-                    dark:    '#5C1010',
-                    muted:   '#6E1A1A',
-                    pale:    '#F5E8E8',
+                    DEFAULT: '#FFC107',
+                    light:   '#FFD54F',
+                    dark:    '#FFA000',
+                    muted:   '#FF8F00',
+                    pale:    '#FFF8E1',
                 },
 
-                // Text Colors — Verli Red on White
-                'studio-white':    '#8B1E1E',
-                'studio-gray':     '#8B1E1E',
-                'studio-muted':    'rgba(139, 30, 30, 0.7)',
-                'studio-faint':    'rgba(139, 30, 30, 0.45)',
+                // Text Colors
+                'studio-white':    '#FFFFFF',
+                'studio-gray':     '#D1D5DB', // Gray-300
+                'studio-muted':    'rgba(255, 255, 255, 0.7)',
+                'studio-faint':    'rgba(255, 255, 255, 0.45)',
             },
 
             fontFamily: {
@@ -78,29 +77,29 @@ export default {
             },
 
             backgroundImage: {
-                'verli-gradient':    'linear-gradient(135deg, #8B1E1E 0%, #A83232 50%, #8B1E1E 100%)',
-                'gold-gradient':     'linear-gradient(135deg, #8B1E1E 0%, #C04040 50%, #8B1E1E 100%)',
-                'crimson-gradient':  'linear-gradient(135deg, #5C1010 0%, #8B1E1E 100%)',
-                'dark-gradient':     'linear-gradient(180deg, #FFFFFF 0%, #FAF9F6 100%)',
-                'card-gradient':     'linear-gradient(135deg, #FFFFFF 0%, #FAF9F6 100%)',
-                'hero-gradient':     'linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 60%, #FFFFFF 100%)',
-                'ink-radial':        'radial-gradient(ellipse at center, rgba(139,30,30,0.06) 0%, transparent 70%)',
-                'tribal-fade':       'linear-gradient(180deg, rgba(139,30,30,0.04) 0%, transparent 100%)',
+                'verli-gradient':    'linear-gradient(135deg, #FFC107 0%, #FFD54F 50%, #FFC107 100%)',
+                'gold-gradient':     'linear-gradient(135deg, #FFC107 0%, #FFD54F 50%, #FFC107 100%)',
+                'crimson-gradient':  'linear-gradient(135deg, #FFA000 0%, #FFC107 100%)',
+                'dark-gradient':     'linear-gradient(180deg, #0A0A0A 0%, #121212 100%)',
+                'card-gradient':     'linear-gradient(135deg, #1A1A1A 0%, #242424 100%)',
+                'hero-gradient':     'linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.8) 60%, #0A0A0A 100%)',
+                'ink-radial':        'radial-gradient(ellipse at center, rgba(255,193,7,0.15) 0%, transparent 70%)',
+                'tribal-fade':       'linear-gradient(180deg, rgba(255,193,7,0.08) 0%, transparent 100%)',
             },
 
             boxShadow: {
-                'verli':      '0 0 20px rgba(139, 30, 30, 0.15), 0 0 60px rgba(139, 30, 30, 0.05)',
-                'verli-sm':   '0 0 10px rgba(139, 30, 30, 0.1)',
-                'verli-lg':   '0 0 40px rgba(139, 30, 30, 0.25), 0 0 100px rgba(139, 30, 30, 0.08)',
-                'gold':       '0 0 20px rgba(139, 30, 30, 0.15), 0 0 60px rgba(139, 30, 30, 0.05)',
-                'gold-sm':    '0 0 10px rgba(139, 30, 30, 0.1)',
-                'gold-lg':    '0 0 40px rgba(139, 30, 30, 0.25)',
-                'crimson':    '0 0 20px rgba(139, 30, 30, 0.2)',
-                'card':       '0 4px 20px rgba(139, 30, 30, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04)',
-                'card-hover': '0 10px 30px rgba(139, 30, 30, 0.12), 0 0 20px rgba(139, 30, 30, 0.06)',
-                'glass':      '0 8px 32px rgba(139, 30, 30, 0.04)',
-                'inset-verli':'inset 0 1px 0 rgba(139, 30, 30, 0.08)',
-                'inset-gold': 'inset 0 1px 0 rgba(139, 30, 30, 0.08)',
+                'verli':      '0 0 20px rgba(255, 193, 7, 0.15), 0 0 60px rgba(255, 193, 7, 0.05)',
+                'verli-sm':   '0 0 10px rgba(255, 193, 7, 0.1)',
+                'verli-lg':   '0 0 40px rgba(255, 193, 7, 0.25), 0 0 100px rgba(255, 193, 7, 0.08)',
+                'gold':       '0 0 20px rgba(255, 193, 7, 0.15), 0 0 60px rgba(255, 193, 7, 0.05)',
+                'gold-sm':    '0 0 10px rgba(255, 193, 7, 0.1)',
+                'gold-lg':    '0 0 40px rgba(255, 193, 7, 0.25)',
+                'crimson':    '0 0 20px rgba(255, 193, 7, 0.2)',
+                'card':       '0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2)',
+                'card-hover': '0 10px 30px rgba(255, 193, 7, 0.12), 0 0 20px rgba(0, 0, 0, 0.5)',
+                'glass':      '0 8px 32px rgba(0, 0, 0, 0.3)',
+                'inset-verli':'inset 0 1px 0 rgba(255, 193, 7, 0.2)',
+                'inset-gold': 'inset 0 1px 0 rgba(255, 193, 7, 0.2)',
             },
 
             backdropBlur: {
@@ -150,8 +149,8 @@ export default {
                     '100%': { backgroundPosition: '200% center' },
                 },
                 pulseVerli: {
-                    '0%, 100%': { boxShadow: '0 0 10px rgba(139,30,30,0.2)' },
-                    '50%':      { boxShadow: '0 0 30px rgba(139,30,30,0.45)' },
+                    '0%, 100%': { boxShadow: '0 0 10px rgba(255,193,7,0.2)' },
+                    '50%':      { boxShadow: '0 0 30px rgba(255,193,7,0.45)' },
                 },
                 glowPulse: {
                     '0%, 100%': { opacity: '0.6' },
@@ -166,8 +165,8 @@ export default {
                     '20%, 24%, 55%': { opacity: '0.4' },
                 },
                 borderGlow: {
-                    '0%, 100%': { borderColor: 'rgba(139,30,30,0.3)' },
-                    '50%':      { borderColor: 'rgba(139,30,30,0.65)' },
+                    '0%, 100%': { borderColor: 'rgba(255,193,7,0.3)' },
+                    '50%':      { borderColor: 'rgba(255,193,7,0.65)' },
                 },
                 scaleIn: {
                     from: { transform: 'scale(0.9)', opacity: '0' },

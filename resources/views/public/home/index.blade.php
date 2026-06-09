@@ -2,8 +2,8 @@
 
 @section('content')
 @php
-    $siteBannerPath = \App\Models\Setting::where('key', 'site_banner')->value('value');
-    $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('images/hero_banner.jpg');
+$siteBannerPath = \App\Models\Setting::where('key', 'site_banner')->value('value');
+$heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('images/hero_banner.jpg');
 @endphp
 
 {{-- ══════════════════════════════════════════════════════
@@ -11,13 +11,13 @@
      ══════════════════════════════════════════════════════ --}}
 <section
     id="hero"
-    class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-start overflow-hidden bg-white pt-20"
+    class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-start overflow-hidden bg-studio-black pt-20"
     aria-label="Hero">
-    <div class="absolute top-4 left-4 right-4 bottom-0 md:top-8 md:left-8 md:right-8 md:bottom-0 z-0 rounded-t-[32px] overflow-hidden bg-white shadow-[0_-10px_40px_rgba(139,30,30,0.1)]">
+    <div class="absolute top-4 left-4 right-4 bottom-0 md:top-8 md:left-8 md:right-8 md:bottom-0 z-0 rounded-t-[32px] overflow-hidden bg-studio-darker shadow-[0_-10px_40px_rgba(255,193,7,0.1)]">
         {{-- Image fills the right 8/12 (2/3) of the screen, and text takes 4/12 (1/3) --}}
         <div class="absolute inset-y-0 right-0 w-full md:w-8/12 bg-[length:auto_100%] md:bg-cover bg-right bg-no-repeat opacity-100" style="background-image: url('{{ $heroBanner }}'); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%); mask-image: linear-gradient(to right, transparent 0%, black 50%);"></div>
         {{-- Light gradient from left for text readability, but lighter overlay so image is visible --}}
-        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-[1]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-studio-darker via-studio-darker/60 to-transparent z-[1]"></div>
         {{-- Verli shadow/tint over the image --}}
         <div class="absolute inset-0 bg-gradient-to-r from-verli/10 via-transparent to-transparent mix-blend-multiply z-[2] pointer-events-none"></div>
     </div>
@@ -32,7 +32,7 @@
     {{-- Floating Left Reviews/Hygiene Badges --}}
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 pointer-events-auto">
         {{-- Google Reviews --}}
-        <a href="{{ config('studio.google_maps_url', 'https://maps.app.goo.gl/FthHoox4rfMViKoLA') }}" target="_blank" rel="noopener" class="bg-white border-y border-r border-gray-200/80 rounded-r-2xl shadow-xl p-3 flex flex-col items-center justify-center text-center w-[76px] transition-all duration-300 hover:translate-x-1.5 group">
+        <a href="{{ config('studio.google_maps_url', 'https://maps.app.goo.gl/FthHoox4rfMViKoLA') }}" target="_blank" rel="noopener" class="bg-studio-card border-y border-r border-studio-border/50 rounded-r-2xl shadow-xl p-3 flex flex-col items-center justify-center text-center w-[76px] transition-all duration-300 hover:translate-x-1.5 group">
             {{-- Colored Google Icon --}}
             <svg class="w-6 h-6 mb-1.5" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -46,7 +46,7 @@
         </a>
 
         {{-- Hygiene & Safety --}}
-        <div class="bg-white border-y border-r border-gray-200/80 rounded-r-2xl shadow-xl p-3 flex flex-col items-center justify-center text-center w-[76px] group">
+        <div class="bg-studio-card border-y border-r border-studio-border/50 rounded-r-2xl shadow-xl p-3 flex flex-col items-center justify-center text-center w-[76px] group">
             {{-- Green Medical Cross Icon --}}
             <svg class="w-6 h-6 mb-1.5 text-green-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -72,9 +72,9 @@
             </div>
 
             {{-- Main Headline: Mixed Serif & Sans-Serif Typography --}}
-            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.2] text-gray-900 mb-3">
-                Your Skin,<br>
-                Our <span class="font-sans font-black bg-gradient-to-r from-verli via-verli-light to-verli bg-clip-text text-transparent uppercase tracking-wider block mt-0.5">Canvas</span>
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.2] text-studio-white mb-3">
+                Your Vision,<br>
+                Our <span class="font-sans font-black bg-gradient-to-r from-verli via-verli-light to-verli bg-clip-text text-transparent uppercase tracking-wider block mt-0.5">Masterpiece</span>
             </h1>
 
             {{-- Verli Divider Line --}}
@@ -145,7 +145,7 @@
      TATTOO CATEGORIES — Scrollable Grid
      ══════════════════════════════════════════════════════ --}}
 <div class="tribal-divider h-10 tribal-bg bg-studio-darker border-t border-studio-border/50"></div>
-<section class="py-24 bg-white" aria-labelledby="categories-heading">
+<section class="py-24 bg-studio-black" aria-labelledby="categories-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-16" data-reveal>
@@ -213,18 +213,18 @@
                     alt="{{ $cat['name'] }} style"
                     loading="lazy"
                     class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out z-0">
-                {{-- Gradient Overlay (light-to-cream matching light mode design) --}}
-                <div class="absolute inset-0 bg-gradient-to-t from-studio-black/95 via-studio-black/50 to-studio-black/10 transition-opacity duration-300 group-hover:opacity-90 z-0"></div>
+                {{-- Gradient Overlay (darker at bottom for readability) --}}
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/10 transition-opacity duration-300 group-hover:opacity-90 z-0"></div>
 
                 {{-- Top Section: Count --}}
-                <div class="flex justify-end items-start z-10">
-                    <span class="text-xs font-semibold text-studio-faint bg-white/85 backdrop-blur-sm px-2.5 py-1 rounded-full border border-studio-border/50 shadow-sm">{{ $cat['count'] }}+</span>
+                <div class="flex justify-end items-start relative z-10">
+                    <span class="text-xs font-bold text-studio-black bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full border border-verli/50 shadow-sm">{{ $cat['count'] }}+</span>
                 </div>
 
                 {{-- Bottom Section: Title -- z-10 to stay on top of background image --}}
-                <div class="z-10">
-                    <h3 class="text-studio-white font-semibold text-lg group-hover:text-verli transition-colors duration-300">{{ $cat['name'] }}</h3>
-                    <p class="text-studio-faint text-xs mt-1 group-hover:text-studio-muted transition-colors">View Gallery →</p>
+                <div class="relative z-10">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-verli transition-colors duration-300">{{ $cat['name'] }}</h3>
+                    <p class="text-gray-300 text-xs mt-1 group-hover:text-white transition-colors">View Gallery →</p>
                 </div>
 
                 {{-- Gold Border on Hover --}}
@@ -242,16 +242,16 @@
 {{-- ══════════════════════════════════════════════════════
      FEATURED PORTFOLIO
      ══════════════════════════════════════════════════════ --}}
-<div class="tribal-divider h-10 tribal-bg bg-white border-t border-studio-border/50"></div>
+<div class="tribal-divider h-10 tribal-bg bg-studio-black border-t border-studio-border/50"></div>
 <section class="py-24 bg-studio-darker" aria-labelledby="portfolio-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-            <div data-reveal>
-                <div class="section-eyebrow">Featured Work</div>
+        <div class="flex flex-col items-center text-center gap-6 mb-16">
+            <div data-reveal class="flex flex-col items-center">
+                <div class="section-eyebrow justify-center">Featured Work</div>
                 <h2 id="portfolio-heading" class="section-title">Ink That<br><span class="text-verli-gradient">Tells Stories</span></h2>
             </div>
-            <a href="{{ route('portfolio') }}" class="btn-outline-verli self-start md:self-auto flex-shrink-0" data-reveal>
+            <a href="{{ route('portfolio') }}" class="btn-outline-verli flex-shrink-0" data-reveal>
                 View Full Portfolio
             </a>
         </div>
@@ -307,7 +307,7 @@
      ARTIST SPOTLIGHT — Dharam Sahu
      ══════════════════════════════════════════════════════ --}}
 <div class="tribal-divider h-10 tribal-bg bg-studio-darker border-t border-studio-border/50"></div>
-<section class="py-24 bg-white relative overflow-hidden" aria-labelledby="artists-heading">
+<section class="py-24 bg-studio-black relative overflow-hidden" aria-labelledby="artists-heading">
     <div class="absolute inset-0 bg-ink-radial pointer-events-none" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -398,7 +398,7 @@
 {{-- ══════════════════════════════════════════════════════
      BOOKING PROCESS — How it Works
      ══════════════════════════════════════════════════════ --}}
-<div class="tribal-divider h-10 tribal-bg bg-white border-t border-studio-border/50"></div>
+<div class="tribal-divider h-10 tribal-bg bg-studio-black border-t border-studio-border/50"></div>
 <section class="py-24 bg-studio-darker relative overflow-hidden" aria-labelledby="process-heading">
     {{-- Fine line accents matching premium luxury brand layout --}}
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-verli/10 to-transparent"></div>
@@ -448,12 +448,12 @@
      TESTIMONIALS
      ══════════════════════════════════════════════════════ --}}
 <div class="tribal-divider h-10 tribal-bg bg-studio-darker border-t border-studio-border/50"></div>
-<section class="py-24 bg-white" aria-labelledby="testimonials-heading">
+<section class="py-24 bg-studio-black" aria-labelledby="testimonials-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-16" data-reveal>
             <div class="section-eyebrow justify-center">Google Reviews</div>
-            <h2 id="testimonials-heading" class="section-title">Loved by Chhattisgarh,<br><span class="text-verli-gradient">Rated 4.8★ on Google</span></h2>
+            <h2 id="testimonials-heading" class="section-title">Loved by Chhattisgarh,<br><span class="text-verli-gradient">Rated 4.9★ on Google</span></h2>
 
             {{-- Google Review Aggregate Rating Summary --}}
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
@@ -543,7 +543,7 @@
 {{-- ══════════════════════════════════════════════════════
      FAQ SECTION
      ══════════════════════════════════════════════════════ --}}
-<div class="tribal-divider h-10 tribal-bg bg-white border-t border-studio-border/50"></div>
+<div class="tribal-divider h-10 tribal-bg bg-studio-black border-t border-studio-border/50"></div>
 <section class="py-24 bg-studio-darker" aria-labelledby="faq-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -607,149 +607,154 @@
 {{-- ══════════════════════════════════════════════════════
      CONTACT & MAP
      ══════════════════════════════════════════════════════ --}}
-<section class="py-24 bg-[#0A0A0A] relative overflow-hidden" aria-labelledby="contact-heading">
-    {{-- Dark Verli Ambient Glow --}}
-    <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-verli/10 rounded-full blur-[120px] opacity-50 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+<section class="py-24 bg-studio-black relative overflow-hidden" aria-labelledby="contact-heading">
+    {{-- Ambient Background --}}
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-verli/5 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16" data-reveal>
+            <div class="section-eyebrow justify-center">Connect With Us</div>
+            <h2 id="contact-heading" class="section-title">Visit Our<br><span class="text-verli-gradient">Studio</span></h2>
+            <p class="section-subtitle mx-auto mt-4 max-w-xl">We're located in the heart of Raipur. Drop by for a consultation or reach out to start your tattoo journey.</p>
+        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-            {{-- Contact Info --}}
-            <div data-reveal>
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-verli/10 border border-verli/30 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold text-verli mb-6">
-                    <span class="w-1.5 h-1.5 rounded-full bg-verli animate-pulse"></span>
-                    <span>Find Us</span>
-                </div>
-
-                <h2 id="contact-heading" class="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-10">
-                    Visit Our<br><span class="text-verli">Studio</span>
-                </h2>
-
-                <div class="space-y-8">
-                    {{-- Location --}}
-                    <div class="flex gap-5 items-start group">
-                        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-verli group-hover:border-verli transition-all duration-300 shadow-lg">
-                            <svg class="w-6 h-6 text-verli group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold text-lg mb-1">Location</p>
-                            <p class="text-gray-400 text-sm leading-relaxed max-w-xs">Chinhari Tattoo Studio, Raipur, Chhattisgarh 492001</p>
-                            <a href="{{ config('studio.google_maps_url') }}" class="text-verli text-xs hover:text-white mt-2 inline-flex items-center gap-1 font-bold tracking-wider uppercase transition-colors" target="_blank" rel="noopener">
-                                Get Directions
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            {{-- Column 1: Small Map Bento Card --}}
+            <div class="card-glass p-3 relative overflow-hidden group min-h-[350px] h-full flex flex-col" data-reveal>
+                <div class="w-full h-full rounded-xl overflow-hidden relative flex-1">
+                    @if(config('studio.google_maps_embed_url'))
+                    <iframe src="{{ config('studio.google_maps_embed_url') }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.7) contrast(1.2);" allowfullscreen loading="lazy"></iframe>
+                    @else
+                    <div class="absolute inset-0 bg-studio-dark flex items-center justify-center">
+                        <div class="absolute inset-0 noise"></div>
+                        <div class="relative z-10 text-center flex flex-col items-center">
+                            <div class="w-14 h-14 bg-verli/10 rounded-full flex items-center justify-center mb-4 border border-verli/30">
+                                <svg class="w-6 h-6 text-verli animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    {{-- Phone --}}
-                    <div class="flex gap-5 items-start group">
-                        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-verli group-hover:border-verli transition-all duration-300 shadow-lg">
-                            <svg class="w-6 h-6 text-verli group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold text-lg mb-1">Phone / WhatsApp</p>
-                            <a href="tel:+919285001719" class="text-gray-400 text-sm hover:text-white transition-colors block">+91 92850 01719</a>
-                        </div>
-                    </div>
-
-                    {{-- Hours --}}
-                    <div class="flex gap-5 items-start group">
-                        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-verli group-hover:border-verli transition-all duration-300 shadow-lg">
-                            <svg class="w-6 h-6 text-verli group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold text-lg mb-1">Studio Hours</p>
-                            <p class="text-gray-400 text-sm">Monday – Sunday<br><span class="text-verli font-semibold">10:00 AM – 10:00 PM</span></p>
-                        </div>
-                    </div>
-
-                    {{-- Social Media --}}
-                    <div class="flex gap-5 items-start group">
-                        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-verli group-hover:border-verli transition-all duration-300 shadow-lg">
-                            <svg class="w-6 h-6 text-verli group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold text-lg mb-2">Follow Us</p>
-                            <div class="flex gap-3">
-                                {{-- Instagram --}}
-                                <a href="{{ config('studio.social.instagram', 'https://instagram.com/chinharitattoo') }}" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all duration-300" target="_blank" rel="noopener" aria-label="Instagram">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                                    </svg>
-                                </a>
-                                {{-- YouTube --}}
-                                <a href="{{ config('studio.social.youtube', 'https://youtube.com/@chinharitattoo') }}" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300" target="_blank" rel="noopener" aria-label="YouTube">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                    </svg>
-                                </a>
-                                {{-- Facebook --}}
-                                <a href="{{ config('studio.social.facebook', 'https://facebook.com/chinharitattoo') }}" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300" target="_blank" rel="noopener" aria-label="Facebook">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                    </svg>
-                                </a>
                             </div>
+                            <h3 class="text-lg text-white font-serif font-bold px-4">Chinhari Tattoo Studio</h3>
                         </div>
                     </div>
-                </div>
+                    @endif
 
-                <div class="flex flex-wrap gap-4 mt-12 items-center">
-                    <a href="tel:+919285001719" class="btn-verli px-8 py-3.5 shadow-verli-lg">Call Now</a>
-                    <a href="https://wa.me/919285001719?text=Hi! I'd like to book a tattoo appointment." class="bg-green-600 hover:bg-green-500 text-white font-semibold text-sm tracking-wide px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-green-600/30 hover:shadow-green-500/50 flex items-center gap-2" target="_blank" rel="noopener">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.024L.192 23.4l5.474-1.436c1.761.947 3.743 1.446 5.765 1.446h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM12.031 21.435h-.005c-1.815 0-3.593-.487-5.15-1.408l-.369-.219-3.829 1.004 1.025-3.733-.241-.383C2.518 15.176 2 13.633 2 12.031 2 6.497 6.498 2 12.035 2 17.568 2 22.062 6.497 22.062 12.031c0 5.534-4.494 10.028-10.031 10.028zm5.508-7.531c-.302-.151-1.786-.883-2.064-.984-.278-.101-.481-.151-.683.151-.202.302-.782.984-.959 1.185-.177.202-.354.227-.656.076-.302-.151-1.275-.47-2.428-1.501-.897-.803-1.503-1.794-1.68-2.096-.177-.302-.019-.465.132-.616.136-.136.302-.352.453-.529.151-.176.202-.302.302-.503.101-.202.05-.377-.025-.528-.076-.151-.683-1.646-.935-2.253-.247-.594-.497-.514-.683-.523-.177-.009-.379-.009-.581-.009s-.53.076-.807.378C3.864 7.218 3 8.249 3 10.312c0 2.063 1.109 4.053 1.261 4.255.151.202 2.902 4.432 7.027 6.213 2.902 1.252 3.971 1.353 5.421 1.139 1.62-.239 4.966-2.027 5.666-3.987.7-1.959.7-3.638.492-3.987-.208-.349-.757-.552-1.059-.703z" />
+                    {{-- Floating Glass Button on Map --}}
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%]">
+                        <a href="{{ config('studio.google_maps_url') }}" class="flex items-center justify-between w-full p-3 card-glass bg-studio-black/80 hover:bg-studio-black transition-colors shadow-2xl backdrop-blur-xl" target="_blank" rel="noopener">
+                            <div class="text-left">
+                                <p class="text-white font-bold text-xs tracking-wide">Get Directions</p>
+                                <p class="text-studio-muted text-[10px] mt-0.5">Raipur, CG</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-verli flex items-center justify-center text-studio-black shadow-lg group-hover:scale-110 transition-transform">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Column 2: Location Details --}}
+            <div class="card-glass p-8 flex flex-col justify-center group h-full" data-reveal data-delay="100">
+                <div class="w-12 h-12 rounded-2xl bg-studio-dark border border-studio-border flex items-center justify-center mb-6 group-hover:border-verli transition-colors shadow-lg">
+                    <svg class="w-6 h-6 text-verli" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-serif text-white font-bold mb-3">Headquarters</h3>
+                <p class="text-studio-gray text-sm leading-relaxed mb-6"><strong>Chinhari Tattoo Studio</strong><br>Bazaar Chowk, near Competition Academy, Shikshak Colony, Daganiya, Amanaka, Raipur<br>Chhattisgarh 492001, India</p>
+
+                {{-- Phone --}}
+                <a href="tel:+919285001719" class="flex items-center gap-3 mb-6 group/phone">
+                    <div class="w-10 h-10 rounded-full bg-studio-dark border border-studio-border flex items-center justify-center group-hover/phone:border-verli transition-colors shadow-md">
+                        <svg class="w-4 h-4 text-verli" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                        WhatsApp
-                    </a>
-                </div>
-            </div>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-studio-faint uppercase tracking-[0.15em] font-bold">Call Us</p>
+                        <p class="text-white font-semibold text-sm group-hover/phone:text-verli transition-colors">+91 92850 01719</p>
+                    </div>
+                </a>
 
-            {{-- Google Maps Embed / Visual Card --}}
-            <div class="relative w-full h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group" data-reveal data-delay="200">
-                @if(config('studio.google_maps_embed_url'))
-                <iframe
-                    src="{{ config('studio.google_maps_embed_url') }}"
-                    class="absolute inset-0 w-full h-full"
-                    style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.7) contrast(1.2);"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Chinhari Tattoo Studio Location Map"
-                    aria-label="Google Maps showing Chinhari Tattoo Studio location in Raipur"></iframe>
-                @else
-                {{-- Highly styled premium fallback map placeholder --}}
-                <div class="absolute inset-0 bg-[#0A0A0A] flex items-center justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-br from-verli/20 to-transparent"></div>
-                    <div class="relative z-10 text-center flex flex-col items-center">
-                        <div class="w-20 h-20 bg-verli/10 rounded-full flex items-center justify-center mb-6 border border-verli/30 shadow-[0_0_30px_rgba(139,30,30,0.4)]">
-                            <svg class="w-10 h-10 text-verli animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl text-white font-serif font-bold mb-2">Chinhari Tattoo Studio</h3>
-                        <p class="text-gray-400 text-sm mb-8 max-w-[200px] leading-relaxed">Raipur, Chhattisgarh<br>492001</p>
-                        <a href="{{ config('studio.google_maps_url') }}" class="btn-verli shadow-verli-lg" target="_blank" rel="noopener">Open in Google Maps</a>
+                <div class="w-full h-px bg-studio-border/50 my-2"></div>
+
+                <div class="mt-6 flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <p class="text-[10px] text-studio-faint uppercase tracking-[0.2em] font-bold">Status</p>
+                        <p class="text-sm font-semibold text-green-400 flex items-center gap-2">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                            </span>
+                            Accepting Walk-ins
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-[10px] text-studio-faint uppercase tracking-[0.2em] font-bold">Hours</p>
+                        <p class="text-sm font-semibold text-white">10:00 AM - 10:00 PM</p>
                     </div>
                 </div>
-                @endif
-
-                {{-- Interactive Map Overlay Effect --}}
-                <div class="absolute inset-0 border-2 border-transparent group-hover:border-verli/30 rounded-3xl transition-colors duration-500 pointer-events-none"></div>
             </div>
+
+            {{-- Column 3: Big Social Media Cards --}}
+            <div class="flex flex-col justify-between gap-4 h-full" data-reveal data-delay="200">
+                {{-- Instagram --}}
+                <a href="{{ config('studio.instagram') }}" class="card-glass p-5 flex items-center gap-5 group hover:-translate-y-1 transition-transform" target="_blank" rel="noopener">
+                    <div class="w-14 h-14 shrink-0 rounded-full bg-studio-dark border border-studio-border flex items-center justify-center text-pink-500 group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-pink-500 group-hover:to-purple-500 group-hover:text-white group-hover:border-transparent transition-all shadow-md">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.199-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.199 4.358 2.618 6.781 6.98 6.98 1.28.058 1.689.072 4.948.072s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.197-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-lg mb-0.5">Instagram</p>
+                        <p class="text-verli text-sm font-semibold">@chinhari_tattoo_raipur</p>
+                    </div>
+                </a>
+
+                {{-- Facebook --}}
+                <a href="{{ config('studio.facebook') }}" class="card-glass p-5 flex items-center gap-5 group hover:-translate-y-1 transition-transform" target="_blank" rel="noopener">
+                    <div class="w-14 h-14 shrink-0 rounded-full bg-studio-dark border border-studio-border flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent transition-all shadow-md">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-lg mb-0.5">Facebook</p>
+                        <p class="text-verli text-sm font-semibold">ChinhariTattooStudio</p>
+                    </div>
+                </a>
+
+                {{-- YouTube --}}
+                <a href="{{ config('studio.youtube') }}" class="card-glass p-5 flex items-center gap-5 group hover:-translate-y-1 transition-transform" target="_blank" rel="noopener">
+                    <div class="w-14 h-14 shrink-0 rounded-full bg-studio-dark border border-studio-border flex items-center justify-center text-red-500 group-hover:bg-red-600 group-hover:text-white group-hover:border-transparent transition-all shadow-md">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-lg mb-0.5">YouTube</p>
+                        <p class="text-verli text-sm font-semibold">@ChinhariTattoo</p>
+                    </div>
+                </a>
+
+                {{-- WhatsApp --}}
+                <a href="https://wa.me/{{ config('studio.whatsapp_number') }}" class="card-glass p-5 flex items-center gap-5 group hover:-translate-y-1 transition-transform" target="_blank" rel="noopener">
+                    <div class="w-14 h-14 shrink-0 rounded-full bg-studio-dark border border-studio-border flex items-center justify-center text-green-500 group-hover:bg-[#25D366] group-hover:text-white group-hover:border-transparent transition-all shadow-md">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-lg mb-0.5">WhatsApp</p>
+                        <p class="text-verli text-sm font-semibold">+91 92850 01719</p>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -794,8 +799,8 @@
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
                 ctx.fillStyle = this.verli ?
-                    `rgba(139, 30, 30, ${this.alpha})` :
-                    `rgba(50, 10, 10, ${this.alpha * 0.5})`;
+                    `rgba(255, 193, 7, ${this.alpha})` :
+                    `rgba(255, 213, 79, ${this.alpha * 0.5})`;
                 ctx.fill();
             }
         }

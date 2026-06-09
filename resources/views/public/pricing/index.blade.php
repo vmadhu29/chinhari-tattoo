@@ -83,7 +83,7 @@
                         </div>
                         
                         <div class="flex gap-4 relative">
-                            <div class="w-8 h-8 rounded-full bg-verli flex items-center justify-center text-white text-xs font-bold flex-shrink-0 z-10 shadow-[0_0_15px_rgba(139,30,30,0.5)]">3</div>
+                            <div class="w-8 h-8 rounded-full bg-verli flex items-center justify-center text-white text-xs font-bold flex-shrink-0 z-10 shadow-[0_0_15px_rgba(255,193,7,0.5)]">3</div>
                             <div>
                                 <h4 class="text-white font-semibold text-sm mb-1">Get Your Exact Price</h4>
                                 <p class="text-studio-muted text-xs leading-relaxed">We calculate the square inch area and provide your final quote instantly.</p>
@@ -100,16 +100,16 @@
 <section class="py-24 bg-studio-black" aria-labelledby="deposit-heading">
     <div class="max-w-4xl mx-auto px-4 text-center">
         <div class="section-eyebrow justify-center" data-reveal>Securing Slots</div>
-        <h2 id="deposit-heading" class="section-title mb-6" data-reveal>Booking Deposit &<br><span class="text-verli-gradient">Reservation Policy</span></h2>
+        <h2 id="deposit-heading" class="section-title mb-6" data-reveal>Booking &<br><span class="text-verli-gradient">Reservation Policy</span></h2>
         <div class="card p-8 rounded-2xl border border-studio-border space-y-4 text-studio-muted text-sm leading-relaxed text-left" data-reveal>
             <p>
-                To reserve an appointment time and secure a spot with our artists, a <strong>non-refundable deposit</strong> is required.
+                To reserve an appointment time and secure a spot with our artists, <strong>no advance deposit is required</strong>. We believe in building trust with our clients, which is why booking your consultation and tattoo session is completely free.
             </p>
             <p>
-                The deposit amount (starting from ₹500 to ₹1,500 depending on the size of the tattoo) is paid online via Razorpay during booking and is <strong>fully adjusted</strong> against the final price of your tattoo on the day of your session.
+                Simply reach out to us with your ideas, finalize the details, and pick a date that works for you. You only pay for your tattoo on the day of your session.
             </p>
             <p class="text-xs text-studio-faint">
-                * Rescheduling requires a 24-hour notice to carry over your deposit. No-shows or late cancellations will forfeit the deposit.
+                * While booking is free, we kindly request a 24-hour notice if you need to reschedule or cancel. As a courtesy to our artists' time, repeated no-shows may not be accommodated for future bookings.
             </p>
         </div>
         <div class="mt-10" data-reveal>

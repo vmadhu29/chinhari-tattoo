@@ -29,17 +29,17 @@
         @else
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach($blogs as $i => $post)
-                    <article class="card p-0 rounded-2xl border border-studio-border bg-studio-black overflow-hidden flex flex-col justify-between" data-reveal data-delay="{{ $i * 100 }}">
-                        <div>
+                    <article class="group card p-0 rounded-2xl border border-studio-border bg-studio-darker hover:border-verli/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col h-full shadow-lg" data-reveal data-delay="{{ $i * 100 }}">
+                        <div class="flex-1 flex flex-col">
                             {{-- Featured Image placeholder/actual --}}
-                            <div class="aspect-video bg-studio-card overflow-hidden relative">
+                            <div class="aspect-video bg-studio-black overflow-hidden relative">
                                 <img 
-                                    src="{{ $post->featured_image ? asset('storage/'.$post->featured_image) : 'https://picsum.photos/600/400?random='.$i }}" 
+                                    src="{{ $post->featured_image ? (Str::startsWith($post->featured_image, 'http') ? $post->featured_image : asset('storage/'.$post->featured_image)) : 'https://picsum.photos/600/400?random='.$i }}" 
                                     alt="{{ $post->title }}"
-                                    class="w-full h-full object-cover"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 >
                             </div>
-                            <div class="p-6">
+                            <div class="p-6 flex-1 flex flex-col">
                                 <div class="flex items-center gap-4 text-xs text-studio-faint mb-3">
                                     <span>{{ $post->published_at ? $post->published_at->format('M d, Y') : $post->created_at->format('M d, Y') }}</span>
                                     <span>•</span>
@@ -49,15 +49,15 @@
                                     $postUrl = $post->external_url ?? route('blog.show', $post->slug);
                                     $targetAttr = $post->external_url ? 'target="_blank" rel="noopener"' : '';
                                 @endphp
-                                <h3 class="text-studio-white font-serif text-xl font-bold mb-3 hover:text-verli transition-colors">
+                                <h3 class="text-studio-white font-serif text-xl font-bold mb-3 group-hover:text-verli transition-colors line-clamp-2">
                                     <a href="{{ $postUrl }}" {!! $targetAttr !!}>{{ $post->title }}</a>
                                 </h3>
                                 <p class="text-studio-muted text-sm leading-relaxed line-clamp-3">{{ $post->excerpt }}</p>
                             </div>
                         </div>
-                        <div class="p-6 pt-0 border-t border-studio-border/20 mt-4 flex items-center justify-between">
+                        <div class="p-6 pt-4 border-t border-studio-border/20 mt-auto flex items-center justify-between">
                             <span class="text-xs text-verli uppercase tracking-wider font-semibold">{{ optional($post->category)->name ?? 'General' }}</span>
-                            <a href="{{ $postUrl }}" {!! $targetAttr !!} class="text-xs text-studio-white hover:text-verli transition-colors font-semibold">Read Article →</a>
+                            <a href="{{ $postUrl }}" {!! $targetAttr !!} class="text-xs text-studio-white group-hover:text-verli transition-colors font-semibold">Read Article →</a>
                         </div>
                     </article>
                 @endforeach

@@ -79,7 +79,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
             position: fixed;
             inset: 0;
             z-index: 9999;
-            background: #FFFFFF;
+            background: #0A0A0A;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,13 +111,13 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
     </style>
 </head>
 
-<body class="bg-white text-studio-gray min-h-screen overflow-x-hidden">
+<body class="bg-studio-black text-studio-gray min-h-screen overflow-x-hidden">
 
     {{-- Cinematic Page Loader --}}
     <div id="page-loader" role="status" aria-label="Loading">
         <div class="text-center">
             <div class="loader-logo w-24 h-24 mx-auto mb-4 rounded-xl overflow-hidden border border-verli/30 shadow-verli bg-black flex items-center justify-center">
-                <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-cover">
+                <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-contain p-1">
             </div>
             <div class="w-32 h-px bg-gradient-to-r from-transparent via-verli to-transparent mx-auto animate-pulse"></div>
             <p class="text-studio-muted text-xs tracking-widest uppercase mt-3 font-semibold">Chinhari Tattoo</p>
@@ -137,7 +137,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
     {{-- ═══════════════════════ NAVIGATION ═══════════════════════ --}}
     <header
         id="main-nav"
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-md border-b border-verli/10 pt-1.5"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-studio-black/95 backdrop-blur-md border-b border-verli/10 pt-1.5"
         x-data="{ mobileOpen: false, scrolled: false }"
         x-init="
             window.addEventListener('scroll', () => {
@@ -154,7 +154,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
                 <a href="{{ route('home') }}" class="flex items-center gap-3 group" aria-label="Chinhari Tattoo Studio">
                     <div class="relative">
                         <div class="w-12 h-12 rounded-xl overflow-hidden border border-verli/30 flex items-center justify-center group-hover:shadow-verli-sm transition-all duration-300 shadow-sm bg-black">
-                            <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-cover">
+                            <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-contain p-0.5">
                         </div>
                     </div>
                     <div>
@@ -195,7 +195,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
                     @auth
                     <a href="{{ route('dashboard') }}" class="btn-ghost text-sm px-4 py-2 text-studio-gray hover:text-verli">Dashboard</a>
                     @else
-                    <a href="{{ route('login') }}" class="btn-ghost text-sm px-4 py-2 text-studio-gray hover:text-verli">Login</a>
+                    <!-- <a href="{{ route('login') }}" class="btn-ghost text-sm px-4 py-2 text-studio-gray hover:text-verli">Login</a> -->
                     @endauth
 
                     <a
@@ -269,7 +269,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
     <footer class="bg-studio-darker border-t border-studio-border mt-0" role="contentinfo">
 
         {{-- Pre-footer CTA --}}
-        <div class="bg-white py-16 px-4 text-center relative overflow-hidden">
+        <div class="bg-studio-card py-16 px-4 text-center relative overflow-hidden">
             <div class="absolute inset-0 bg-ink-radial pointer-events-none" aria-hidden="true"></div>
             <div class="relative max-w-3xl mx-auto">
                 <div class="section-eyebrow justify-center mb-6">Ready to get inked?</div>
@@ -302,7 +302,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 rounded-xl overflow-hidden border border-verli/30 flex items-center justify-center bg-black">
-                            <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-cover">
+                            <img src="{{ $siteLogo }}" alt="Chinhari Tattoo Logo" class="w-full h-full object-contain p-0.5">
                         </div>
                         <div>
                             <div class="font-display text-2xl tracking-[0.15em] text-studio-white leading-none font-bold">CHINHARI</div>
@@ -330,7 +330,7 @@ $siteLogo = $siteLogoPath ? asset('storage/' . $siteLogoPath) : asset('images/lo
                         @foreach($socials as $social)
                         <a href="{{ $social['href'] }}" target="_blank" rel="noopener noreferrer"
                             aria-label="{{ $social['label'] }}"
-                            class="w-10 h-10 rounded-full bg-white border border-studio-border
+                            class="w-10 h-10 rounded-full bg-studio-dark border border-studio-border
                                       flex items-center justify-center text-studio-muted
                                       hover:text-verli hover:border-verli/50 hover:bg-verli/5
                                       transition-all duration-300">
