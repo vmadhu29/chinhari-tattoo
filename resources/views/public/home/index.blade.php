@@ -4,6 +4,8 @@
 @php
 $siteBannerPath = \App\Models\Setting::where('key', 'site_banner')->value('value');
 $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('images/hero_banner.jpg');
+$googleRating = \App\Models\Setting::where('key', 'google_rating')->value('value') ?? 4.9;
+$googleReviewCount = \App\Models\Setting::where('key', 'google_review_count')->value('value') ?? '150+';
 @endphp
 
 {{-- ══════════════════════════════════════════════════════
@@ -42,7 +44,7 @@ $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('ima
             </svg>
             <span class="text-[9px] text-studio-muted font-bold tracking-tight leading-none">Google</span>
             <span class="text-[9px] text-studio-faint font-semibold tracking-tight leading-none mt-0.5">Reviews</span>
-            <span class="text-xs font-black text-verli-dark mt-2">{{ number_format(Cache::get('google_rating', 4.8), 1) }}</span>
+            <span class="text-xs font-black text-verli-dark mt-2">{{ number_format((float)$googleRating, 1) }}</span>
         </a>
 
         {{-- Hygiene & Safety --}}
@@ -73,8 +75,8 @@ $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('ima
 
             {{-- Main Headline: Mixed Serif & Sans-Serif Typography --}}
             <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.2] text-studio-white mb-3">
-                Your Vision,<br>
-                Our <span class="font-sans font-black bg-gradient-to-r from-verli via-verli-light to-verli bg-clip-text text-transparent uppercase tracking-wider block mt-0.5">Masterpiece</span>
+                We Ink Your Emotions Into<br>
+                Memorable <span class="font-sans font-black bg-gradient-to-r from-verli via-verli-light to-verli bg-clip-text text-transparent uppercase tracking-wider">Symbols</span>
             </h1>
 
             {{-- Verli Divider Line --}}
@@ -118,9 +120,8 @@ $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('ima
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 relative">
             @php
-            $googleRating = Cache::get('google_rating', 5.0);
-            $googleRatingWhole = floor($googleRating);
-            $googleRatingSuffix = str_replace($googleRatingWhole, '', number_format($googleRating, 1));
+            $googleRatingWhole = floor((float)$googleRating);
+            $googleRatingSuffix = str_replace($googleRatingWhole, '', number_format((float)$googleRating, 1));
 
             $stats = [
             ['number' => 500, 'suffix' => '+', 'label' => 'Happy Clients'],
@@ -453,7 +454,7 @@ $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('ima
 
         <div class="text-center mb-16" data-reveal>
             <div class="section-eyebrow justify-center">Google Reviews</div>
-            <h2 id="testimonials-heading" class="section-title">Loved by Chhattisgarh,<br><span class="text-verli-gradient">Rated 4.9★ on Google</span></h2>
+            <h2 id="testimonials-heading" class="section-title">Loved by Chhattisgarh,<br><span class="text-verli-gradient">Rated {{ number_format((float)$googleRating, 1) }}★ on Google</span></h2>
 
             {{-- Google Review Aggregate Rating Summary --}}
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
@@ -465,14 +466,14 @@ $heroBanner = $siteBannerPath ? asset('storage/' . $siteBannerPath) : asset('ima
                         <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
                         <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
                     </svg>
-                    <span class="text-sm font-bold text-studio-white">{{ number_format(Cache::get('google_rating', 4.8), 1) }}</span>
+                    <span class="text-sm font-bold text-studio-white">{{ number_format((float)$googleRating, 1) }}</span>
                     <div class="flex text-verli">
-                        @for($s=1;$s<=round(Cache::get('google_rating', 4.8));$s++)
+                        @for($s=1;$s<=round((float)$googleRating);$s++)
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                             @endfor
                     </div>
-                    <span class="text-[11px] text-studio-muted">based on {{ Cache::get('google_review_count', '150+') }} reviews</span>
+                    <span class="text-[11px] text-studio-muted">based on {{ $googleReviewCount }} reviews</span>
                 </div>
                 <a href="https://maps.app.goo.gl/FthHoox4rfMViKoLA" target="_blank" rel="noopener" class="text-xs text-verli hover:text-verli-light inline-flex items-center gap-1 font-semibold group transition-all">
                     Write a Review

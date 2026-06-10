@@ -42,10 +42,16 @@ class FetchGoogleRating extends Command
                 $rating = $data['result']['rating'];
                 $count = $data['result']['user_ratings_total'];
                 
-                Cache::forever('google_rating', $rating);
-                Cache::forever('google_review_count', $count);
+                \App\Models\Setting::updateOrCreate(
+                    ['key' => 'google_rating'],
+                    ['value' => (string) $rating]
+                );
+                \App\Models\Setting::updateOrCreate(
+                    ['key' => 'google_review_count'],
+                    ['value' => (string) $count]
+                );
                 
-                $this->info("Successfully cached Google Rating: {$rating} and Count: {$count}");
+                $this->info("Successfully stored Google Rating: {$rating} and Count: {$count} in DB");
             } else {
                 $this->error('Failed to find rating in the Google Places response.');
                 Log::error('Google Places API response missing rating fields', ['response' => $data]);
